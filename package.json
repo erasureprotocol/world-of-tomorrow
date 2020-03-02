@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "dev": "http-server"
+    "dev": "http-server",
+    "deploy": "aws s3 cp ./index.html s3://world-of-tomorrow.erasurebay.org/ && aws s3 cp ./index.js s3://world-of-tomorrow.erasurebay.org/ && aws s3 cp ./index.css s3://world-of-tomorrow.erasurebay.org/"
   },
   "repository": {
     "type": "git",

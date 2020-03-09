@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import imageWorld from "./static/world.jpg";
@@ -15,6 +15,23 @@ import { Row, Col, Container } from "react-bootstrap";
 import Slide from "react-reveal/Slide";
 
 function App() {
+  const [isMobile, setMobile] = useState(false);
+
+  const resize = () => {
+    console.log("Resize!");
+    if (window.innerWidth < 600) {
+      setMobile(true);
+    } else {
+      setMobile(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", resize);
+    return function cleanup() {
+      window.removeEventListener("resize", resize);
+    };
+  });
   return (
     <div className="App">
       <NavBar />
@@ -66,17 +83,18 @@ function App() {
           </Slide>
         </Container>
       </Panel>
-      <ImagePanel src={imageCrowdsourcing} />
+      <ImagePanel src={imageCrowdsourcing}>
+        <ImageTitle>
+          Summon intelligence
+          <br />
+          <strong>out of thin air_</strong>
+        </ImageTitle>
+      </ImagePanel>
       <Slide bottom>
         <Panel>
           <Container>
             <Row>
               <Col md={{ span: 10, offset: 1 }}>
-                <Title>
-                  Summon intelligence
-                  <br />
-                  <strong>out of thin air_</strong>
-                </Title>
                 <Copy>
                   Buying information has traditionally been difficult because
                   you can only judge its quality once you have paid for and
@@ -96,28 +114,38 @@ function App() {
                 <Spacer />
                 {/* <ProjectLogo src={imageNumeraiLogo} /> */}
                 <Copy>
-                  <strong>Numerai</strong>: a hedge fund that trades equities
-                  based on an aggregation of thousands of predictions made by a
-                  global network of competing data scientists. Because each user
-                  stakes on their predictions and inaccurate predictions have
-                  their stakes destroyed, Numerai can gauge the confidence of
-                  the anonymous competitors.
+                  <strong>
+                    <Link href="#">
+                      <strong>Numerai</strong>
+                    </Link>
+                  </strong>
+                  : a hedge fund that trades equities based on an aggregation of
+                  thousands of predictions made by a global network of competing
+                  data scientists. Because each user stakes on their predictions
+                  and inaccurate predictions have their stakes destroyed,
+                  Numerai can gauge the confidence of the anonymous competitors.
                 </Copy>
                 <Spacer />
                 {/* <ProjectLogo src={imageErasureBayLogo} /> */}
                 <Copy>
-                  <strong>Erasure Bay</strong>: a new marketplace for sourcing
-                  any kind of information. Make requests for information like
-                  predictions, secrets, whistleblowers, recommendations and
-                  require that fulfillers place a stake. Try it today.
+                  <Link href="#">
+                    <strong>Erasure Bay</strong>
+                  </Link>
+                  : a new marketplace for sourcing any kind of information. Make
+                  requests for information like predictions, secrets,
+                  whistleblowers, recommendations and require that fulfillers
+                  place a stake. Try it today.
                 </Copy>
                 <Spacer />
                 {/* <ProjectLogo src={imageErasureQuantLogo} /> */}
                 <Copy>
-                  <strong>Erasure Quant</strong>: an ongoing tournament to
-                  gather Russel 3000 stock predictions. All predictions are
-                  staked, and are burned according to accuracy. Rewards paid are
-                  proportional to the stake.
+                  <Link href="#">
+                    <strong>Erasure Quant</strong>
+                  </Link>
+                  : an ongoing tournament to gather Russel 3000 stock
+                  predictions. All predictions are staked, and are burned
+                  according to accuracy. Rewards paid are proportional to the
+                  stake.
                 </Copy>
               </Col>
             </Row>
@@ -138,10 +166,10 @@ function App() {
               </Copy>
 
               <Copy>
-                Erasure’s SDK can be used to create a browser-extension that
-                hides all tweets, Reddit posts and emails that aren’t staked
-                with a nominal amount of currency. Spam and bot armies would
-                suddenly become prohibitively expensive.
+                <Link href="#">Erasure’s SDK</Link> can be used to create a
+                browser-extension that hides all tweets, Reddit posts and emails
+                that aren’t staked with a nominal amount of currency. Spam and
+                bot armies would suddenly become prohibitively expensive.
               </Copy>
 
               <Copy>
@@ -161,20 +189,21 @@ function App() {
           </Row>
         </Container>
       </Panel>
-      <ImagePanel src={imagePunish} />
+      <ImagePanel src={imagePunish}>
+        <ImageTitle end>
+          <strong>Punish</strong> bad dates_
+        </ImageTitle>
+      </ImagePanel>
       <Panel dark>
         <Container>
           <Row>
             <Col md={{ span: 10, offset: 1 }}>
-              <Title>
-                <strong>Punish</strong> bad dates_
-              </Title>
               <Copy>
                 What about using stakes to enforce promises? Imagine an app that
                 allows a man to stake on a date. For 24 hours she has the power
                 to indiscriminately slash the money he has put down, so she’s
-                likely to believe him when he promises to be a gentleman. This
-                app can be made with Erasure.
+                more likely to believe him when he promises to be a gentleman.
+                This app can be made with Erasure.
               </Copy>
 
               <Copy>
@@ -275,6 +304,55 @@ const NavLink = styled.a`
   }
 `;
 
+const Link = styled.a`
+  text-decoration: none;
+  background: linear-gradient(#fff, #fff), linear-gradient(#fff, #fff),
+    linear-gradient(var(--link-color), var(--link-color));
+  background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
+  background-repeat: no-repeat, no-repeat, repeat-x;
+  background-position: 0 95%, 100% 95%, 0 95%;
+  font-weight: normal;
+  color: #000;
+
+  transition: color 0.2s;
+
+  :hover {
+    text-decoration: none;
+    color: var(--link-color);
+    background: unset;
+  }
+`;
+
+function ImageTitle(props) {
+  const TitleContainer = styled.div`
+    padding: 0.4em 0.8em;
+    margin-top: 3em;
+    color: white;
+    font-family: eurostile-extended, sans-serif;
+    font-weight: 400;
+    width: 100%;
+    display: flex;
+    font-style: normal;
+    text-transform: uppercase;
+    font-size: 2.8em;
+    color: ${props => props.color};
+    ${props =>
+      props.end ? "justify-content: flex-end; align-items: flex-end" : null}
+  `;
+
+  const TitleWrapper = styled.span`
+    background-color: var(--link-color);
+  `;
+
+  return (
+    <TitleContainer end={props.end}>
+      <div>
+        <TitleWrapper>{props.children}</TitleWrapper>
+      </div>
+    </TitleContainer>
+  );
+}
+
 // resize = () => {
 //   if (window.innerWidth < 600) {
 //     this.setState({ isMobile: true })
@@ -356,17 +434,20 @@ export const FlexRow = styled.div`
 `;
 
 const Panel = styled.div`
-  padding: 8em 0;
+  padding: 4em 0;
   text-align: left;
   ${props => (props.dark ? "background-color: var(--dark-panel-color)" : null)}
 `;
 
-const Title = styled.h1`
+const Title = styled.div`
   font-family: eurostile-extended, sans-serif;
+  font-size: 2.8em;
   font-weight: 400;
   font-style: normal;
   text-transform: uppercase;
   margin-bottom: 1em;
+  // color: white;
+  // background-color: var(--link-color);
 `;
 
 const Copy = styled.p`
@@ -376,14 +457,14 @@ const Copy = styled.p`
 `;
 
 const ImagePanel = styled.div`
-    width: 100%;
-    height: 800px;
-    ${props => (props.center ? "align-items: center;" : null)}
-    background: url(${props => props.src}) no-repeat center center ;
-    -webkit-background-size: cover;
+  width: 100%;
+  height: 800px;
+  background: url(${props => props.src}) no-repeat center center;
+  -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  overflow: auto;
 `;
 
 const WhiteGradient = styled.div`

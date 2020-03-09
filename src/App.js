@@ -127,9 +127,7 @@ function App() {
       <Panel dark>
         <Container>
           <Title>
-            Only see
-            <br />
-            <strong>what’s real_</strong>
+            Only see what’s <strong>real_</strong>
           </Title>
           <Row>
             <Col md={6}>
@@ -235,9 +233,9 @@ function App() {
           <FlexRow spaceBetween>
             <div>Erasure</div>
             <div>
-              <a href="#">Contact</a>
-              <a href="#">Github</a>
-              <a href="#">Documentation</a>
+              <NavLink href="#">Contact</NavLink>
+              <NavLink href="#">Github</NavLink>
+              <NavLink href="#">Docs</NavLink>
             </div>
           </FlexRow>
         </Container>
@@ -255,6 +253,26 @@ const ProjectLogo = styled.img`
   height: 3em;
   margin-bottom: 0.8em;
   margin-left: -0.4em;
+`;
+
+const NavLink = styled.a`
+  margin-right: 0.8em;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--nav-color);
+
+  transition: all 0.2s;
+
+  :hover {
+    color: var(--nav-color);
+    opacity: 0.7;
+    text-decoration: none;
+  }
+
+  :active {
+    color: var(--nav-color);
+    opacity: 0.4;
+  }
 `;
 
 // resize = () => {
@@ -295,7 +313,10 @@ function NavBar() {
         <Logo src={imageLogo} />
         <Description>A new staking protocol powered by NMR </Description>
       </FlexRow>
-      <div>Twitter</div>
+      <div>
+        <NavLink href="#">Docs</NavLink>
+        <NavLink href="#">Github</NavLink>
+      </div>
     </NavContainer>
   );
 }

@@ -1,0 +1,379 @@
+import React, { useState } from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import imageWorld from "./static/world.jpg";
+import imageLogo from "./static/logo.png";
+import imageNumeraiLogo from "./static/numerai-logo.png";
+import imageErasureBayLogo from "./static/erasure-bay-logo.png";
+import imageErasureQuantLogo from "./static/erasure-quant-logo.png";
+import imageCrowdsourcing from "./static/crowdsourcing.jpg";
+import imageXray from "./static/xray.jpg";
+import imagePunish from "./static/punish.jpg";
+import imageSprout from "./static/sprout.jpg";
+import styled, { css } from "styled-components";
+import { Row, Col, Container } from "react-bootstrap";
+import Slide from "react-reveal/Slide";
+
+function App() {
+  return (
+    <div className="App">
+      <NavBar />
+      <ImagePanel src={imageWorld}>
+        <WhiteGradient />
+      </ImagePanel>
+      <Panel>
+        <Container>
+          <Slide bottom>
+            <Row>
+              <Col md={{ span: 10, offset: 1 }}>
+                <Title>
+                  A Way To Be <strong>Believed_</strong>
+                </Title>
+                <Copy>
+                  In the real world, producing anything has a cost. This is not
+                  true on the Internet, where contributing information and
+                  commentary is completely free. This has been great for
+                  bootstrapping and giving billions of people a platform.
+                </Copy>
+
+                <Copy>
+                  Unfortunately many online services suffer because of this zero
+                  barrier to participation; there is no cost to misbehaviour
+                  like false information, spam, trolling and bot armies which
+                  cost only a click.
+                </Copy>
+                <Copy>
+                  But what if you were able to attach a small amount of money to
+                  your online interactions, and the person you were interacting
+                  with was, for a period of time, allowed to destroy your staked
+                  money? A stranger might now be more willing to pay attention
+                  and trust you, because you have skin in the game.
+                </Copy>
+
+                <Copy>
+                  Erasure is a live protocol on the Ethereum blockchain that
+                  allows this staking mechanism to be adopted across the web.
+                  Initially developed to crowdsource intelligence for the
+                  Numerai hedge fund, it is now open to be used for any
+                  platform.{" "}
+                  <strong>
+                    Creating instant trust with perfect strangers opens a
+                    surprising array of new possibilities…
+                  </strong>
+                </Copy>
+              </Col>
+            </Row>
+          </Slide>
+        </Container>
+      </Panel>
+      <ImagePanel src={imageCrowdsourcing} />
+      <Slide bottom>
+        <Panel>
+          <Container>
+            <Row>
+              <Col md={{ span: 10, offset: 1 }}>
+                <Title>
+                  Summon intelligence
+                  <br />
+                  <strong>out of thin air_</strong>
+                </Title>
+                <Copy>
+                  Buying information has traditionally been difficult because
+                  you can only judge its quality once you have paid for and
+                  received it. This has meant only buying information from
+                  trusted sources with a good reputation. This excludes the long
+                  tail of people around the world who have valuable insights but
+                  no way to be believed.
+                </Copy>
+                <Copy>
+                  Now imagine if information sources staked their offering: a
+                  buyer can then punish the source if they do not like what was
+                  delivered. Like this, information can be trusted from the
+                  individuals who do not have track records or wish to stay
+                  anonymous.{" "}
+                  <strong>Erasure is being used for this right now:</strong>
+                </Copy>
+                <Spacer />
+                {/* <ProjectLogo src={imageNumeraiLogo} /> */}
+                <Copy>
+                  <strong>Numerai</strong>: a hedge fund that trades equities
+                  based on an aggregation of thousands of predictions made by a
+                  global network of competing data scientists. Because each user
+                  stakes on their predictions and inaccurate predictions have
+                  their stakes destroyed, Numerai can gauge the confidence of
+                  the anonymous competitors.
+                </Copy>
+                <Spacer />
+                {/* <ProjectLogo src={imageErasureBayLogo} /> */}
+                <Copy>
+                  <strong>Erasure Bay</strong>: a new marketplace for sourcing
+                  any kind of information. Make requests for information like
+                  predictions, secrets, whistleblowers, recommendations and
+                  require that fulfillers place a stake. Try it today.
+                </Copy>
+                <Spacer />
+                {/* <ProjectLogo src={imageErasureQuantLogo} /> */}
+                <Copy>
+                  <strong>Erasure Quant</strong>: an ongoing tournament to
+                  gather Russel 3000 stock predictions. All predictions are
+                  staked, and are burned according to accuracy. Rewards paid are
+                  proportional to the stake.
+                </Copy>
+              </Col>
+            </Row>
+          </Container>
+        </Panel>
+      </Slide>
+      <Panel dark>
+        <Container>
+          <Title>
+            Only see
+            <br />
+            <strong>what’s real_</strong>
+          </Title>
+          <Row>
+            <Col md={6}>
+              <Copy>
+                Making a Twitter account doesn't cost anything. Nor does making
+                ten thousand. The growing number of bots and trolls online are
+                making important public conversations difficult.
+              </Copy>
+
+              <Copy>
+                Erasure’s SDK can be used to create a browser-extension that
+                hides all tweets, Reddit posts and emails that aren’t staked
+                with a nominal amount of currency. Spam and bot armies would
+                suddenly become prohibitively expensive.
+              </Copy>
+
+              <Copy>
+                Like augmented reality goggles for the Internet, Erasure can cut
+                through the noise by only showing you what people have staked
+                currency on.
+              </Copy>
+
+              <Copy>
+                Numerai currently uses staking on Erasure to filter contributing
+                data scientists’ predictions.
+              </Copy>
+            </Col>
+            <Col md={6}>
+              <ImageInline src={imageXray} alt="Erasure X-Ray Spectacles" />
+            </Col>
+          </Row>
+        </Container>
+      </Panel>
+      <ImagePanel src={imagePunish} />
+      <Panel dark>
+        <Container>
+          <Row>
+            <Col md={{ span: 10, offset: 1 }}>
+              <Title>
+                <strong>Punish</strong> bad dates_
+              </Title>
+              <Copy>
+                What about using stakes to enforce promises? Imagine an app that
+                allows a man to stake on a date. For 24 hours she has the power
+                to indiscriminately slash the money he has put down, so she’s
+                likely to believe him when he promises to be a gentleman. This
+                app can be made with Erasure.
+              </Copy>
+
+              <Copy>
+                The instant trust earned by staking enables transacting with a
+                much broader set of people. More people would accommodate a
+                couch surfer who staked money for the duration of her stay. More
+                people would accept a staked meeting request from a stranger.
+                More people would host events if attendees staked their
+                attendance. More people would pick up cold calls if they were
+                staked.
+              </Copy>
+
+              <Copy>
+                Erasure lets you settle disputes without a middle man. It is
+                handled completely between you and your counterparty.
+              </Copy>
+            </Col>
+          </Row>
+        </Container>
+      </Panel>
+      <Panel>
+        <Container>
+          <Row>
+            <Col md={6}>
+              <ImageInline src={imageSprout} alt="Man sprouting truth" />
+            </Col>
+            <Col md={6}>
+              <Title>
+                So much <strong>more_</strong>
+              </Title>
+              <Copy>
+                “Erasure solves the problem of bad information online. What
+                would Reddit look like if users had something real to lose for
+                every post, would troll farms be able to manipulate it as
+                easily? What if you could burn a publication’s stake for
+                promoting fake news, or an advertiser for misleading consumers?
+                Can Erasure help manage the threat of deep-fakes? It may be that
+                the only way to distinguish good from bad information online may
+                come down to how much value its creator stakes behind it. That’s
+                the vision of this protocol.” — Placeholder VC (full thesis
+                coming soon)
+              </Copy>
+
+              <Copy>
+                We won’t reach this world of the future alone. Join us in making
+                it. Erasure will be useful in many more ways that we haven’t
+                thought of, so we’ve packaged it into an SDK that anyone can use
+                to develop apps that implement the protocol.
+              </Copy>
+            </Col>
+          </Row>
+        </Container>
+      </Panel>
+      <Footer>
+        <Container>
+          <FlexRow spaceBetween>
+            <div>Erasure</div>
+            <div>
+              <a href="#">Contact</a>
+              <a href="#">Github</a>
+              <a href="#">Documentation</a>
+            </div>
+          </FlexRow>
+        </Container>
+      </Footer>
+    </div>
+  );
+}
+
+const ImageInline = styled.img`
+  width: 100%;
+  padding: 0.8em 3em;
+`;
+
+const ProjectLogo = styled.img`
+  height: 3em;
+  margin-bottom: 0.8em;
+  margin-left: -0.4em;
+`;
+
+// resize = () => {
+//   if (window.innerWidth < 600) {
+//     this.setState({ isMobile: true })
+//   } else {
+//     this.setState({ isMobile: false })
+//   }
+// }
+
+// componentDidMount = async () => {
+//   console.log('App mounted')
+//   window.addEventListener('resize', this.resize)
+//   this.resize()
+
+function NavBar() {
+  const NavContainer = styled.header`
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 2em 2em;
+    box-sizing: border-box;
+  `;
+
+  const Logo = styled.img`
+    height: 3em;
+  `;
+
+  const Description = styled.div`
+    font-size: 1.4em;
+    color: var(--copyColor);
+    margin-left: 1em;
+  `;
+
+  return (
+    <NavContainer>
+      <FlexRow>
+        <Logo src={imageLogo} />
+        <Description>A new staking protocol powered by NMR </Description>
+      </FlexRow>
+      <div>Twitter</div>
+    </NavContainer>
+  );
+}
+
+const Footer = styled.div`
+  width: 100%;
+  background-color: var(--dark-panel-color);
+  padding: 2em 2em;
+`;
+
+export const Spacer = styled.div`
+  height: 0px;
+  max-height: 0px;
+  overflow: hidden;
+
+  ${props =>
+    props.horizontal
+      ? css`
+          margin-right: 1.4em;
+          height: 100%;
+        `
+      : css`
+          margin-top: 1.4em;
+          width: 100%;
+        `};
+`;
+
+export const FlexRow = styled.div`
+  display: flex;
+  flex-direction: row;
+
+  ${props =>
+    props.spaceBetween ? "justify-content: space-between; width: 100%;" : null}
+
+  ${props => (props.center ? "align-items: center;" : null)}
+  ${props => (props.flexStart ? "align-items: flex-start;" : null)}
+`;
+
+const Panel = styled.div`
+  padding: 8em 0;
+  text-align: left;
+  ${props => (props.dark ? "background-color: var(--dark-panel-color)" : null)}
+`;
+
+const Title = styled.h1`
+  font-family: eurostile-extended, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: uppercase;
+  margin-bottom: 1em;
+`;
+
+const Copy = styled.p`
+  color: var(--copyColor);
+  font-size: 21px;
+  line-height: 1.58;
+`;
+
+const ImagePanel = styled.div`
+    width: 100%;
+    height: 800px;
+    ${props => (props.center ? "align-items: center;" : null)}
+    background: url(${props => props.src}) no-repeat center center ;
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+`;
+
+const WhiteGradient = styled.div`
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0.6) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  height: 10em;
+  width: 100%;
+`;
+
+export default App;

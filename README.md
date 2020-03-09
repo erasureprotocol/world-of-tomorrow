@@ -4,6 +4,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+### `yarn deploy`
+
+This deploys to the production website's S3 bucket. Changes should be reflected immediately on https://erasure.world/. Note: requires that you have setup the aws-cli with a user that has write permissions to this bucket.
+
 ### `yarn start`
 
 Runs the app in the development mode.<br />

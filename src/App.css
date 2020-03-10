@@ -3,6 +3,9 @@ html {
   --dark-panel-color: #f7f7f7;
   --nav-color: #000;
   --link-color: #ff3074;
+  --button-color: #000;
+  --button-hover-color: #ff3074;
+  --button-active-color: #b4003c;
   font-size: 0.9rem;
 }
 

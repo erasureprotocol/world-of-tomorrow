@@ -13,8 +13,9 @@ import imageXrayTurned from "./static/xray_turned.png";
 import imagePunish from "./static/punish.jpg";
 import imageSprout from "./static/sprout.jpg";
 import styled, { css } from "styled-components";
-import { Row, Col, Container } from "react-bootstrap";
+import { Row, Col, Container, Dropdown } from "react-bootstrap";
 import Slide from "react-reveal/Slide";
+import { FaGithub, FaMediumM, FaTwitter } from "react-icons/fa";
 
 function App() {
   const [isMobile, setMobile] = useState(false);
@@ -118,10 +119,9 @@ function App() {
                 <strong>Erasure is being used for this right now:</strong>
               </Copy>
               <Spacer />
-              {/* <ProjectLogo src={imageNumeraiLogo} /> */}
               <Copy>
                 <strong>
-                  <Link href="#">
+                  <Link href="https://numer.ai" target="_blank">
                     <strong>Numerai</strong>
                   </Link>
                 </strong>
@@ -132,9 +132,8 @@ function App() {
                 can gauge the confidence of the anonymous competitors.
               </Copy>
               <Spacer />
-              {/* <ProjectLogo src={imageErasureBayLogo} /> */}
               <Copy>
-                <Link href="#">
+                <Link href="https://erasurebay.org" target="_blank">
                   <strong>Erasure Bay</strong>
                 </Link>
                 : a new marketplace for sourcing any kind of information. Make
@@ -143,9 +142,8 @@ function App() {
                 place a stake. Try it today.
               </Copy>
               <Spacer />
-              {/* <ProjectLogo src={imageErasureQuantLogo} /> */}
               <Copy>
-                <Link href="#">
+                <Link href="https://erasurequant.com" target="_blank">
                   <strong>Erasure Quant</strong>
                 </Link>
                 : an ongoing tournament to gather Russel 3000 stock predictions.
@@ -156,7 +154,7 @@ function App() {
           </Row>
         </Container>
       </Panel>
-      <Panel dark>
+      <Panel bigPadding>
         <Container>
           {/* <HalfImage src={imageXrayCut} /> */}
 
@@ -166,7 +164,8 @@ function App() {
             </Col>
             <Col md={6}>
               <Title mobile={isMobile}>
-                Only see what’s <strong>real_</strong>
+                Only see <br />
+                what’s <strong>real_</strong>
               </Title>
               <Copy>
                 Making a Twitter account doesn't cost anything. Nor does making
@@ -175,10 +174,16 @@ function App() {
               </Copy>
 
               <Copy>
-                <Link href="#">Erasure’s SDK</Link> can be used to create a
-                browser-extension that hides all tweets, Reddit posts and emails
-                that aren’t staked with a nominal amount of currency. Spam and
-                bot armies would suddenly become prohibitively expensive.
+                <Link
+                  href="https://github.com/erasureprotocol/erasure-protocol"
+                  target="_blank"
+                >
+                  Erasure’s protocol
+                </Link>{" "}
+                can be used to create a browser-extension that hides all tweets,
+                Reddit posts and emails that aren’t staked with a nominal amount
+                of currency. Spam and bot armies would suddenly become
+                prohibitively expensive.
               </Copy>
 
               <Copy>
@@ -201,7 +206,7 @@ function App() {
           </ImageTitle>
         </Slide>
       </ImagePanel>
-      <Panel dark>
+      <Panel>
         <Container>
           <Row>
             <Col md={{ span: 10, offset: 1 }}>
@@ -231,7 +236,7 @@ function App() {
           </Row>
         </Container>
       </Panel>
-      <Panel>
+      <Panel bigPadding>
         <Container>
           <Row>
             <Col md={6}>
@@ -251,15 +256,38 @@ function App() {
                 the only way to distinguish good from bad information online may
                 come down to how much value its creator stakes behind it. That’s
                 the vision of this protocol.”
+                <Spacer />
                 <br />—{" "}
                 <Link href="https://www.placeholder.vc/">Placeholder VC</Link>
               </Quote>
-
               <Copy>
+                <Spacer />
+                <Spacer />
                 We won’t reach this world of the future alone. Join us in making
-                it. Erasure will be useful in many more ways that we haven’t
-                thought of, so we’ve packaged it into an SDK that anyone can use
-                to develop apps that implement the protocol.
+                it.
+              </Copy>
+              <Spacer />
+              <Spacer />
+              <Copy>
+                <FlexRow>
+                  <a
+                    href="https://github.com/erasureprotocol/erasure-protocol"
+                    target="_blank"
+                  >
+                    <Button>Github</Button>
+                  </a>
+                  <Spacer horizontal />
+                  <a
+                    href="https://medium.com/numerai/the-erasure-protocol-awakens-48a34cc4b5d0?source=collection_home---6------6-----------------------"
+                    target="_blank"
+                  >
+                    <Button>Medium</Button>
+                  </a>
+                  <Spacer horizontal />
+                  <a href="https://twitter.com/numerai" target="_blank">
+                    <Button>Twitter</Button>
+                  </a>
+                </FlexRow>
               </Copy>
             </Col>
           </Row>
@@ -268,12 +296,19 @@ function App() {
       <Footer>
         <Container>
           <FlexRow spaceBetween>
-            <div>Erasure</div>
-            <div>
-              <NavLink href="#">Contact</NavLink>
-              <NavLink href="#">Github</NavLink>
-              <NavLink href="#">Docs</NavLink>
-            </div>
+            <div>ERASURE</div>
+            <FlexRow center>
+              {/* <NavLink href="#">Contact</NavLink> */}
+              <NavLink
+                href="https://github.com/erasureprotocol/erasure-protocol"
+                target="_blank"
+              >
+                Github
+              </NavLink>
+              <NavLink href="https://docs.erasure.world/" target="_blank">
+                Docs
+              </NavLink>
+            </FlexRow>
           </FlexRow>
         </Container>
       </Footer>
@@ -290,6 +325,32 @@ const ProjectLogo = styled.img`
   height: 3em;
   margin-bottom: 0.8em;
   margin-left: -0.4em;
+`;
+
+const Button = styled.button`
+  border: 0;
+  outline: 0;
+  background-color: var(--button-color);
+  color: white;
+  font-weight: bold;
+  border-radius: 0.2em;
+  font-size: 0.8em;
+  padding: 0.4em 0.8em;
+  transition: all 0.2s;
+  text-transform: uppercase;
+  // display: flex;
+  // align-items: center;
+  // text-decoration: none;
+
+  :hover {
+    outline: 0;
+    background-color: var(--button-hover-color);
+    color: white;
+  }
+
+  :active:hover {
+    background-color: var(--button-active-color);
+  }
 `;
 
 const NavLink = styled.a`
@@ -375,6 +436,10 @@ function ImageTitle(props) {
 //   window.addEventListener('resize', this.resize)
 //   this.resize()
 
+const NavLogo = styled.img`
+  height: 3em;
+`;
+
 function NavBar(props) {
   const NavContainer = styled.header`
     width: 100%;
@@ -382,10 +447,6 @@ function NavBar(props) {
     justify-content: space-between;
     padding: 2em 2em;
     box-sizing: border-box;
-  `;
-
-  const Logo = styled.img`
-    height: 3em;
   `;
 
   const Description = styled.div`
@@ -400,7 +461,7 @@ function NavBar(props) {
     <NavContainer>
       <div>
         <FlexRow>
-          <Logo src={imageLogo} />
+          <NavLogo src={imageLogo} />
           {/* {!props.mobile && (
             <Description>A new staking protocol powered by NMR </Description>
           )} */}
@@ -410,10 +471,38 @@ function NavBar(props) {
         )} */}
       </div>
 
-      <div>
-        <NavLink href="#">Docs</NavLink>
-        <NavLink href="#">Github</NavLink>
-      </div>
+      {!props.mobile && (
+        <FlexRow center>
+          <NavLink href="https://docs.erasure.world" target="_blank">
+            Docs
+          </NavLink>
+          <NavLink
+            href="https://github.com/erasureprotocol/erasure-protocol"
+            target="_blank"
+          >
+            Github
+          </NavLink>
+        </FlexRow>
+      )}
+      {props.mobile && (
+        <Dropdown alignRight>
+          <Dropdown.Toggle variant="success" id="dropdown-basic">
+            Menu
+          </Dropdown.Toggle>
+
+          <Dropdown.Menu>
+            <Dropdown.Item href="https://docs.erasure.world" target="_blank">
+              Docs
+            </Dropdown.Item>
+            <Dropdown.Item
+              href="https://github.com/erasureprotocol/erasure-protocol"
+              target="_blank"
+            >
+              Github
+            </Dropdown.Item>
+          </Dropdown.Menu>
+        </Dropdown>
+      )}
     </NavContainer>
   );
 }
@@ -457,6 +546,7 @@ const Panel = styled.div`
   text-align: left;
   ${props => (props.dark ? "background-color: var(--dark-panel-color)" : null)}
   ${props => (props.noPadding ? "padding: 0;" : null)}
+  ${props => (props.bigPadding ? "padding: 8em 0;" : null)}
 `;
 
 const Title = styled.div`
@@ -467,7 +557,6 @@ const Title = styled.div`
   text-transform: uppercase;
   margin-bottom: 1em;
   // color: white;
-  // background-color: var(--link-color);
   ${props => (props.mobile ? "font-size: 1.8em;" : null)}
 `;
 

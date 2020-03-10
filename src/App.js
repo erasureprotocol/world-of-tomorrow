@@ -30,6 +30,7 @@ function App() {
 
   useEffect(() => {
     window.addEventListener("resize", resize);
+    resize();
     return function cleanup() {
       window.removeEventListener("resize", resize);
     };
@@ -37,14 +38,19 @@ function App() {
   return (
     <div className="App">
       <NavBar mobile={isMobile} />
-      <ImagePanel src={imageWorld}>
-        <WhiteGradient />
+      <ImagePanel src={imageWorld} mobile={isMobile}>
+        {/* <WhiteGradient /> */}
+        <ImageTitle mobile={isMobile}>
+          <strong>A new staking protocol</strong>
+          <br />
+          powered by NMR
+        </ImageTitle>
       </ImagePanel>
       <Panel>
         <Container>
           <Row>
             <Col md={{ span: 10, offset: 1 }}>
-              <Title>
+              <Title mobile={isMobile}>
                 A Way To Be <strong>Believed_</strong>
               </Title>
               <Copy>
@@ -84,7 +90,7 @@ function App() {
       </Panel>
       <ImagePanel src={imageCrowdsourcing}>
         <Slide bottom>
-          <ImageTitle>
+          <ImageTitle mobile={isMobile}>
             Summon intelligence
             <br />
             <strong>out of thin air_</strong>
@@ -159,7 +165,7 @@ function App() {
               <img src={imageXrayTurned} style={{ width: "100%" }} />
             </Col>
             <Col md={6}>
-              <Title>
+              <Title mobile={isMobile}>
                 Only see what’s <strong>real_</strong>
               </Title>
               <Copy>
@@ -176,9 +182,8 @@ function App() {
               </Copy>
 
               <Copy>
-                Like augmented reality goggles for the Internet, Erasure can cut
-                through the noise by only showing you what people have staked
-                currency on.
+                Like x-ray goggles for the Internet, Erasure can cut through the
+                noise by only showing you what people have staked currency on.
               </Copy>
 
               <Copy>
@@ -191,7 +196,7 @@ function App() {
       </Panel>
       <ImagePanel src={imagePunish}>
         <Slide bottom>
-          <ImageTitle end>
+          <ImageTitle mobile={isMobile} end>
             <strong>Punish</strong> bad dates_
           </ImageTitle>
         </Slide>
@@ -236,7 +241,7 @@ function App() {
               <Title>
                 So much <strong>more_</strong>
               </Title>
-              <Copy>
+              <Quote>
                 “Erasure solves the problem of bad information online. What
                 would Reddit look like if users had something real to lose for
                 every post, would troll farms be able to manipulate it as
@@ -245,9 +250,10 @@ function App() {
                 Can Erasure help manage the threat of deep-fakes? It may be that
                 the only way to distinguish good from bad information online may
                 come down to how much value its creator stakes behind it. That’s
-                the vision of this protocol.” — Placeholder VC (full thesis
-                coming soon)
-              </Copy>
+                the vision of this protocol.”
+                <br />—{" "}
+                <Link href="https://www.placeholder.vc/">Placeholder VC</Link>
+              </Quote>
 
               <Copy>
                 We won’t reach this world of the future alone. Join us in making
@@ -338,6 +344,7 @@ function ImageTitle(props) {
     text-transform: uppercase;
     font-size: 2.8em;
     color: ${props => props.color};
+    ${props => (props.mobile ? "font-size: 1.8em; margin-top: 1em;" : null)}
     ${props =>
       props.end ? "justify-content: flex-end; align-items: flex-end" : null}
   `;
@@ -347,7 +354,7 @@ function ImageTitle(props) {
   `;
 
   return (
-    <TitleContainer end={props.end}>
+    <TitleContainer end={props.end} color={props.color} mobile={props.mobile}>
       <div>
         <TitleWrapper>{props.children}</TitleWrapper>
       </div>
@@ -382,9 +389,11 @@ function NavBar(props) {
   `;
 
   const Description = styled.div`
-    font-size: 1.4em;
+    font-size: 1.2em;
     color: var(--copyColor);
     margin-left: 1em;
+    line-height: 1;
+    margin-top: 0.1em;
   `;
 
   return (
@@ -392,13 +401,13 @@ function NavBar(props) {
       <div>
         <FlexRow>
           <Logo src={imageLogo} />
-          {!props.mobile && (
+          {/* {!props.mobile && (
             <Description>A new staking protocol powered by NMR </Description>
-          )}
+          )} */}
         </FlexRow>
-        {props.mobile && (
+        {/* {props.mobile && (
           <Description>A new staking protocol powered by NMR </Description>
-        )}
+        )} */}
       </div>
 
       <div>
@@ -459,12 +468,18 @@ const Title = styled.div`
   margin-bottom: 1em;
   // color: white;
   // background-color: var(--link-color);
+  ${props => (props.mobile ? "font-size: 1.8em;" : null)}
 `;
 
 const Copy = styled.p`
   color: var(--copyColor);
   font-size: 21px;
   line-height: 1.58;
+`;
+
+const Quote = styled(Copy)`
+  padding: 2em 2em;
+  background-color: var(--dark-panel-color);
 `;
 
 const ImagePanel = styled.div`
@@ -476,6 +491,7 @@ const ImagePanel = styled.div`
   -o-background-size: cover;
   background-size: cover;
   overflow: auto;
+  ${props => (props.mobile ? "height: 400px;" : null)}
 `;
 
 const HalfImagePanel = styled.div`

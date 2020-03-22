@@ -4,6 +4,18 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+### `yarn add-locale {LANGUAGE}`
+
+Adds a locale for translation, eg. `yarn add-locale es`
+
+### `yarn extract`
+
+Extracts all <Trans> tags into translation locale files
+
+### `yarn compile`
+
+Compiles translations
+
 ### `yarn deploy`
 
 This deploys to the production website's S3 bucket. Changes should be reflected immediately on https://erasure.world/. Note: requires that you have setup the aws-cli with a user that has write permissions to this bucket.

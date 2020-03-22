@@ -20,8 +20,15 @@ import { I18nProvider } from "@lingui/react";
 import { Trans } from "@lingui/macro";
 
 import catalogEn from "./locales/en/messages.js";
+import catalogZh from "./locales/zh/messages.js";
+import catalogRu from "./locales/ru/messages.js";
 import catalogEs from "./locales/es/messages.js";
-const catalogs = { en: catalogEn, es: catalogEs };
+const catalogs = {
+  en: catalogEn,
+  zh: catalogZh,
+  ru: catalogRu,
+  es: catalogEs
+};
 
 function detectLanguage() {
   var language = "en";
@@ -65,10 +72,10 @@ function App() {
           {/* <WhiteGradient /> */}
           <ImageTitle mobile={isMobile}>
             <strong>
-              <Trans id="home.motto">A new staking protocol</Trans>
+              <Trans>A new staking protocol</Trans>
             </strong>
             <br />
-            powered by NMR
+            <Trans>powered by NMR</Trans>
           </ImageTitle>
         </ImagePanel>
         <Panel>
@@ -76,39 +83,50 @@ function App() {
             <Row>
               <Col md={{ span: 10, offset: 1 }}>
                 <Title mobile={isMobile}>
-                  A Way To Be <strong>Believed_</strong>
+                  <Trans>
+                    A Way To Be <strong>Believed_</strong>
+                  </Trans>
                 </Title>
                 <Copy>
-                  In the real world, producing anything has a cost. This is not
-                  true on the Internet, where contributing information and
-                  commentary is completely free. This has been great for
-                  bootstrapping and giving billions of people a platform.
+                  <Trans>
+                    In the real world, producing anything has a cost. This is
+                    not true on the Internet, where contributing information and
+                    commentary is completely free. This has been great for
+                    bootstrapping and giving billions of people a platform.
+                  </Trans>
                 </Copy>
 
                 <Copy>
-                  Unfortunately many online services suffer because of this zero
-                  barrier to participation; there is no cost to misbehaviour
-                  like false information, spam, trolling and bot armies which
-                  cost only a click.
+                  <Trans>
+                    Unfortunately many online services suffer because of this
+                    zero barrier to participation; there is no cost to
+                    misbehaviour like false information, spam, trolling and bot
+                    armies which cost only a click.
+                  </Trans>
                 </Copy>
                 <Copy>
-                  But what if you were able to attach a small amount of money to
-                  your online interactions, and the person you were interacting
-                  with was, for a period of time, allowed to destroy your staked
-                  money? A stranger might now be more willing to pay attention
-                  and trust you, because you have skin in the game.
+                  <Trans>
+                    But what if you were able to attach a small amount of money
+                    to your online interactions, and the person you were
+                    interacting with was, for a period of time, allowed to
+                    destroy your staked money? A stranger might now be more
+                    willing to pay attention and trust you, because you have
+                    skin in the game.
+                  </Trans>
                 </Copy>
 
                 <Copy>
-                  Erasure is a live protocol on the Ethereum blockchain that
-                  allows this staking mechanism to be adopted across the web.
-                  Initially developed to crowdsource intelligence for the
-                  Numerai hedge fund, it is now open to be used for any
-                  platform.{" "}
-                  <strong>
-                    Creating instant trust with perfect strangers opens a
-                    surprising array of new possibilities…
-                  </strong>
+                  <Trans>
+                    Erasure is a live protocol on the Ethereum blockchain that
+                    allows this staking mechanism to be adopted across the web.
+                    Initially developed to crowdsource intelligence for the
+                    Numerai hedge fund, it is now open to be used for any
+                    platform.{" "}
+                    <strong>
+                      Creating instant trust with perfect strangers opens a
+                      surprising array of new possibilities…
+                    </strong>
+                  </Trans>
                 </Copy>
               </Col>
             </Row>
@@ -117,9 +135,11 @@ function App() {
         <ImagePanel src={imageCrowdsourcing}>
           <Slide bottom>
             <ImageTitle mobile={isMobile}>
-              Summon intelligence
-              <br />
-              <strong>out of thin air_</strong>
+              <Trans>
+                Summon intelligence
+                <br />
+                <strong>out of thin air_</strong>
+              </Trans>
             </ImageTitle>
           </Slide>
         </ImagePanel>
@@ -128,20 +148,24 @@ function App() {
             <Row>
               <Col md={{ span: 10, offset: 1 }}>
                 <Copy>
-                  Buying information has traditionally been difficult because
-                  you can only judge its quality once you have paid for and
-                  received it. This has meant only buying information from
-                  trusted sources with a good reputation. This excludes the long
-                  tail of people around the world who have valuable insights but
-                  no way to be believed.
+                  <Trans>
+                    Buying information has traditionally been difficult because
+                    you can only judge its quality once you have paid for and
+                    received it. This has meant only buying information from
+                    trusted sources with a good reputation. This excludes the
+                    long tail of people around the world who have valuable
+                    insights but no way to be believed.
+                  </Trans>
                 </Copy>
                 <Copy>
-                  Now imagine if information sources staked their offering: a
-                  buyer can then punish the source if they do not like what was
-                  delivered. Like this, information can be trusted from the
-                  individuals who do not have track records or wish to stay
-                  anonymous.{" "}
-                  <strong>Erasure is being used for this right now:</strong>
+                  <Trans>
+                    Now imagine if information sources staked their offering: a
+                    buyer can then punish the source if they do not like what
+                    was delivered. Like this, information can be trusted from
+                    the individuals who do not have track records or wish to
+                    stay anonymous.{" "}
+                    <strong>Erasure is being used for this right now:</strong>
+                  </Trans>
                 </Copy>
                 <Spacer />
                 <Copy>
@@ -150,31 +174,41 @@ function App() {
                       <strong>Numerai</strong>
                     </Link>
                   </strong>
-                  : a hedge fund that trades equities based on an aggregation of
-                  thousands of predictions made by a global network of competing
-                  data scientists. Because each user stakes on their predictions
-                  and inaccurate predictions have their stakes destroyed,
-                  Numerai can gauge the confidence of the anonymous competitors.
+                  :
+                  <Trans>
+                    a hedge fund that trades equities based on an aggregation of
+                    thousands of predictions made by a global network of
+                    competing data scientists. Because each user stakes on their
+                    predictions and inaccurate predictions have their stakes
+                    destroyed, Numerai can gauge the confidence of the anonymous
+                    competitors.
+                  </Trans>
                 </Copy>
                 <Spacer />
                 <Copy>
                   <Link href="https://erasurebay.org" target="_blank">
                     <strong>Erasure Bay</strong>
                   </Link>
-                  : a new marketplace for sourcing any kind of information. Make
-                  requests for information like predictions, secrets,
-                  whistleblowers, recommendations and require that fulfillers
-                  place a stake. Try it today.
+                  :
+                  <Trans>
+                    a new marketplace for sourcing any kind of information. Make
+                    requests for information like predictions, secrets,
+                    whistleblowers, recommendations and require that fulfillers
+                    place a stake. Try it today.
+                  </Trans>
                 </Copy>
                 <Spacer />
                 <Copy>
                   <Link href="https://erasurequant.com" target="_blank">
                     <strong>Erasure Quant</strong>
                   </Link>
-                  : an ongoing tournament to gather Russel 3000 stock
-                  predictions. All predictions are staked, and are burned
-                  according to accuracy. Rewards paid are proportional to the
-                  stake.
+                  :
+                  <Trans>
+                    an ongoing tournament to gather Russel 3000 stock
+                    predictions. All predictions are staked, and are burned
+                    according to accuracy. Rewards paid are proportional to the
+                    stake.
+                  </Trans>
                 </Copy>
               </Col>
             </Row>
@@ -190,37 +224,47 @@ function App() {
               </Col>
               <Col md={6}>
                 <Title mobile={isMobile}>
-                  Only see <br />
-                  what’s <strong>real_</strong>
+                  <Trans>
+                    Only see <br />
+                    what’s <strong>real_</strong>
+                  </Trans>
                 </Title>
                 <Copy>
-                  Making a Twitter account doesn't cost anything. Nor does
-                  making ten thousand. The growing number of bots and trolls
-                  online are making important public conversations difficult.
+                  <Trans>
+                    Making a Twitter account doesn't cost anything. Nor does
+                    making ten thousand. The growing number of bots and trolls
+                    online are making important public conversations difficult.
+                  </Trans>
                 </Copy>
 
                 <Copy>
-                  <Link
-                    href="https://github.com/erasureprotocol/erasure-protocol"
-                    target="_blank"
-                  >
-                    Erasure’s protocol
-                  </Link>{" "}
-                  can be used to create a browser-extension that hides all
-                  tweets, Reddit posts and emails that aren’t staked with a
-                  nominal amount of currency. Spam and bot armies would suddenly
-                  become prohibitively expensive.
+                  <Trans>
+                    <Link
+                      href="https://github.com/erasureprotocol/erasure-protocol"
+                      target="_blank"
+                    >
+                      Erasure’s protocol
+                    </Link>{" "}
+                    can be used to create a browser-extension that hides all
+                    tweets, Reddit posts and emails that aren’t staked with a
+                    nominal amount of currency. Spam and bot armies would
+                    suddenly become prohibitively expensive.
+                  </Trans>
                 </Copy>
 
                 <Copy>
-                  Like x-ray goggles for the Internet, Erasure can cut through
-                  the noise by only showing you what people have staked currency
-                  on.
+                  <Trans>
+                    Like x-ray goggles for the Internet, Erasure can cut through
+                    the noise by only showing you what people have staked
+                    currency on.
+                  </Trans>
                 </Copy>
 
                 <Copy>
-                  Numerai currently uses staking on Erasure to filter
-                  contributing data scientists’ predictions.
+                  <Trans>
+                    Numerai currently uses staking on Erasure to filter
+                    contributing data scientists’ predictions.
+                  </Trans>
                 </Copy>
               </Col>
             </Row>
@@ -229,7 +273,9 @@ function App() {
         <ImagePanel src={imagePunish}>
           <Slide bottom>
             <ImageTitle mobile={isMobile} end>
-              <strong>Punish</strong> bad dates_
+              <Trans>
+                <strong>Punish</strong> bad dates_
+              </Trans>
             </ImageTitle>
           </Slide>
         </ImagePanel>
@@ -238,26 +284,32 @@ function App() {
             <Row>
               <Col md={{ span: 10, offset: 1 }}>
                 <Copy>
-                  What about using stakes to enforce promises? Imagine an app
-                  that allows a man to stake on a date. For 24 hours she has the
-                  power to indiscriminately slash the money he has put down, so
-                  she’s more likely to believe him when he promises to be a
-                  gentleman. This app can be made with Erasure.
+                  <Trans>
+                    What about using stakes to enforce promises? Imagine an app
+                    that allows a man to stake on a date. For 24 hours she has
+                    the power to indiscriminately slash the money he has put
+                    down, so she’s more likely to believe him when he promises
+                    to be a gentleman. This app can be made with Erasure.
+                  </Trans>
                 </Copy>
 
                 <Copy>
-                  The instant trust earned by staking enables transacting with a
-                  much broader set of people. More people would accommodate a
-                  couch surfer who staked money for the duration of her stay.
-                  More people would accept a staked meeting request from a
-                  stranger. More people would host events if attendees staked
-                  their attendance. More people would pick up cold calls if they
-                  were staked.
+                  <Trans>
+                    The instant trust earned by staking enables transacting with
+                    a much broader set of people. More people would accommodate
+                    a couch surfer who staked money for the duration of her
+                    stay. More people would accept a staked meeting request from
+                    a stranger. More people would host events if attendees
+                    staked their attendance. More people would pick up cold
+                    calls if they were staked.
+                  </Trans>
                 </Copy>
 
                 <Copy>
-                  Erasure lets you settle disputes without a middle man. It is
-                  handled completely between you and your counterparty.
+                  <Trans>
+                    Erasure lets you settle disputes without a middle man. It is
+                    handled completely between you and your counterparty.
+                  </Trans>
                 </Copy>
               </Col>
             </Row>
@@ -271,7 +323,9 @@ function App() {
               </Col>
               <Col md={6}>
                 <Title>
-                  So much <strong>more_</strong>
+                  <Trans>
+                    So much <strong>more_</strong>
+                  </Trans>
                 </Title>
                 <Quote>
                   “Erasure solves the problem of bad information online. What

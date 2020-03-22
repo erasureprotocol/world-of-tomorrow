@@ -1,0 +1,11 @@
+{
+  "home.motto": {
+    "defaults": "A new staking protocol",
+    "origin": [
+      [
+        "src/App.js",
+        68
+      ]
+    ]
+  }
+}

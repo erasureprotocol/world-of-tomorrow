@@ -16,6 +16,24 @@ import styled, { css } from "styled-components";
 import { Row, Col, Container, Dropdown } from "react-bootstrap";
 import Slide from "react-reveal/Slide";
 import { FaGithub, FaMediumM, FaTwitter } from "react-icons/fa";
+import { I18nProvider } from "@lingui/react";
+import { Trans } from "@lingui/macro";
+
+import catalogEn from "./locales/en/messages.js";
+import catalogEs from "./locales/es/messages.js";
+const catalogs = { en: catalogEn, es: catalogEs };
+
+function detectLanguage() {
+  var language = "en";
+
+  const longLanguage =
+    window.navigator.userLanguage || window.navigator.language;
+  if (longLanguage && catalogs[longLanguage.slice(0, 2)]) {
+    language = longLanguage.slice(0, 2);
+  }
+
+  return language;
+}
 
 function App() {
   const [isMobile, setMobile] = useState(false);
@@ -36,283 +54,293 @@ function App() {
       window.removeEventListener("resize", resize);
     };
   });
+
+  const language = detectLanguage();
+
   return (
-    <div className="App">
-      <NavBar mobile={isMobile} />
-      <ImagePanel src={imageWorld} mobile={isMobile}>
-        {/* <WhiteGradient /> */}
-        <ImageTitle mobile={isMobile}>
-          <strong>A new staking protocol</strong>
-          <br />
-          powered by NMR
-        </ImageTitle>
-      </ImagePanel>
-      <Panel>
-        <Container>
-          <Row>
-            <Col md={{ span: 10, offset: 1 }}>
-              <Title mobile={isMobile}>
-                A Way To Be <strong>Believed_</strong>
-              </Title>
-              <Copy>
-                In the real world, producing anything has a cost. This is not
-                true on the Internet, where contributing information and
-                commentary is completely free. This has been great for
-                bootstrapping and giving billions of people a platform.
-              </Copy>
-
-              <Copy>
-                Unfortunately many online services suffer because of this zero
-                barrier to participation; there is no cost to misbehaviour like
-                false information, spam, trolling and bot armies which cost only
-                a click.
-              </Copy>
-              <Copy>
-                But what if you were able to attach a small amount of money to
-                your online interactions, and the person you were interacting
-                with was, for a period of time, allowed to destroy your staked
-                money? A stranger might now be more willing to pay attention and
-                trust you, because you have skin in the game.
-              </Copy>
-
-              <Copy>
-                Erasure is a live protocol on the Ethereum blockchain that
-                allows this staking mechanism to be adopted across the web.
-                Initially developed to crowdsource intelligence for the Numerai
-                hedge fund, it is now open to be used for any platform.{" "}
-                <strong>
-                  Creating instant trust with perfect strangers opens a
-                  surprising array of new possibilities…
-                </strong>
-              </Copy>
-            </Col>
-          </Row>
-        </Container>
-      </Panel>
-      <ImagePanel src={imageCrowdsourcing}>
-        <Slide bottom>
+    <I18nProvider language={language} catalogs={catalogs}>
+      <div className="App">
+        <NavBar mobile={isMobile} />
+        <ImagePanel src={imageWorld} mobile={isMobile}>
+          {/* <WhiteGradient /> */}
           <ImageTitle mobile={isMobile}>
-            Summon intelligence
+            <strong>
+              <Trans id="home.motto">A new staking protocol</Trans>
+            </strong>
             <br />
-            <strong>out of thin air_</strong>
+            powered by NMR
           </ImageTitle>
-        </Slide>
-      </ImagePanel>
-      <Panel>
-        <Container>
-          <Row>
-            <Col md={{ span: 10, offset: 1 }}>
-              <Copy>
-                Buying information has traditionally been difficult because you
-                can only judge its quality once you have paid for and received
-                it. This has meant only buying information from trusted sources
-                with a good reputation. This excludes the long tail of people
-                around the world who have valuable insights but no way to be
-                believed.
-              </Copy>
-              <Copy>
-                Now imagine if information sources staked their offering: a
-                buyer can then punish the source if they do not like what was
-                delivered. Like this, information can be trusted from the
-                individuals who do not have track records or wish to stay
-                anonymous.{" "}
-                <strong>Erasure is being used for this right now:</strong>
-              </Copy>
-              <Spacer />
-              <Copy>
-                <strong>
-                  <Link href="https://numer.ai" target="_blank">
-                    <strong>Numerai</strong>
+        </ImagePanel>
+        <Panel>
+          <Container>
+            <Row>
+              <Col md={{ span: 10, offset: 1 }}>
+                <Title mobile={isMobile}>
+                  A Way To Be <strong>Believed_</strong>
+                </Title>
+                <Copy>
+                  In the real world, producing anything has a cost. This is not
+                  true on the Internet, where contributing information and
+                  commentary is completely free. This has been great for
+                  bootstrapping and giving billions of people a platform.
+                </Copy>
+
+                <Copy>
+                  Unfortunately many online services suffer because of this zero
+                  barrier to participation; there is no cost to misbehaviour
+                  like false information, spam, trolling and bot armies which
+                  cost only a click.
+                </Copy>
+                <Copy>
+                  But what if you were able to attach a small amount of money to
+                  your online interactions, and the person you were interacting
+                  with was, for a period of time, allowed to destroy your staked
+                  money? A stranger might now be more willing to pay attention
+                  and trust you, because you have skin in the game.
+                </Copy>
+
+                <Copy>
+                  Erasure is a live protocol on the Ethereum blockchain that
+                  allows this staking mechanism to be adopted across the web.
+                  Initially developed to crowdsource intelligence for the
+                  Numerai hedge fund, it is now open to be used for any
+                  platform.{" "}
+                  <strong>
+                    Creating instant trust with perfect strangers opens a
+                    surprising array of new possibilities…
+                  </strong>
+                </Copy>
+              </Col>
+            </Row>
+          </Container>
+        </Panel>
+        <ImagePanel src={imageCrowdsourcing}>
+          <Slide bottom>
+            <ImageTitle mobile={isMobile}>
+              Summon intelligence
+              <br />
+              <strong>out of thin air_</strong>
+            </ImageTitle>
+          </Slide>
+        </ImagePanel>
+        <Panel>
+          <Container>
+            <Row>
+              <Col md={{ span: 10, offset: 1 }}>
+                <Copy>
+                  Buying information has traditionally been difficult because
+                  you can only judge its quality once you have paid for and
+                  received it. This has meant only buying information from
+                  trusted sources with a good reputation. This excludes the long
+                  tail of people around the world who have valuable insights but
+                  no way to be believed.
+                </Copy>
+                <Copy>
+                  Now imagine if information sources staked their offering: a
+                  buyer can then punish the source if they do not like what was
+                  delivered. Like this, information can be trusted from the
+                  individuals who do not have track records or wish to stay
+                  anonymous.{" "}
+                  <strong>Erasure is being used for this right now:</strong>
+                </Copy>
+                <Spacer />
+                <Copy>
+                  <strong>
+                    <Link href="https://numer.ai" target="_blank">
+                      <strong>Numerai</strong>
+                    </Link>
+                  </strong>
+                  : a hedge fund that trades equities based on an aggregation of
+                  thousands of predictions made by a global network of competing
+                  data scientists. Because each user stakes on their predictions
+                  and inaccurate predictions have their stakes destroyed,
+                  Numerai can gauge the confidence of the anonymous competitors.
+                </Copy>
+                <Spacer />
+                <Copy>
+                  <Link href="https://erasurebay.org" target="_blank">
+                    <strong>Erasure Bay</strong>
                   </Link>
-                </strong>
-                : a hedge fund that trades equities based on an aggregation of
-                thousands of predictions made by a global network of competing
-                data scientists. Because each user stakes on their predictions
-                and inaccurate predictions have their stakes destroyed, Numerai
-                can gauge the confidence of the anonymous competitors.
-              </Copy>
-              <Spacer />
-              <Copy>
-                <Link href="https://erasurebay.org" target="_blank">
-                  <strong>Erasure Bay</strong>
-                </Link>
-                : a new marketplace for sourcing any kind of information. Make
-                requests for information like predictions, secrets,
-                whistleblowers, recommendations and require that fulfillers
-                place a stake. Try it today.
-              </Copy>
-              <Spacer />
-              <Copy>
-                <Link href="https://erasurequant.com" target="_blank">
-                  <strong>Erasure Quant</strong>
-                </Link>
-                : an ongoing tournament to gather Russel 3000 stock predictions.
-                All predictions are staked, and are burned according to
-                accuracy. Rewards paid are proportional to the stake.
-              </Copy>
-            </Col>
-          </Row>
-        </Container>
-      </Panel>
-      <Panel bigPadding>
-        <Container>
-          {/* <HalfImage src={imageXrayCut} /> */}
-
-          <Row>
-            <Col md={6}>
-              <img src={imageXrayTurned} style={{ width: "100%" }} />
-            </Col>
-            <Col md={6}>
-              <Title mobile={isMobile}>
-                Only see <br />
-                what’s <strong>real_</strong>
-              </Title>
-              <Copy>
-                Making a Twitter account doesn't cost anything. Nor does making
-                ten thousand. The growing number of bots and trolls online are
-                making important public conversations difficult.
-              </Copy>
-
-              <Copy>
-                <Link
-                  href="https://github.com/erasureprotocol/erasure-protocol"
-                  target="_blank"
-                >
-                  Erasure’s protocol
-                </Link>{" "}
-                can be used to create a browser-extension that hides all tweets,
-                Reddit posts and emails that aren’t staked with a nominal amount
-                of currency. Spam and bot armies would suddenly become
-                prohibitively expensive.
-              </Copy>
-
-              <Copy>
-                Like x-ray goggles for the Internet, Erasure can cut through the
-                noise by only showing you what people have staked currency on.
-              </Copy>
-
-              <Copy>
-                Numerai currently uses staking on Erasure to filter contributing
-                data scientists’ predictions.
-              </Copy>
-            </Col>
-          </Row>
-        </Container>
-      </Panel>
-      <ImagePanel src={imagePunish}>
-        <Slide bottom>
-          <ImageTitle mobile={isMobile} end>
-            <strong>Punish</strong> bad dates_
-          </ImageTitle>
-        </Slide>
-      </ImagePanel>
-      <Panel>
-        <Container>
-          <Row>
-            <Col md={{ span: 10, offset: 1 }}>
-              <Copy>
-                What about using stakes to enforce promises? Imagine an app that
-                allows a man to stake on a date. For 24 hours she has the power
-                to indiscriminately slash the money he has put down, so she’s
-                more likely to believe him when he promises to be a gentleman.
-                This app can be made with Erasure.
-              </Copy>
-
-              <Copy>
-                The instant trust earned by staking enables transacting with a
-                much broader set of people. More people would accommodate a
-                couch surfer who staked money for the duration of her stay. More
-                people would accept a staked meeting request from a stranger.
-                More people would host events if attendees staked their
-                attendance. More people would pick up cold calls if they were
-                staked.
-              </Copy>
-
-              <Copy>
-                Erasure lets you settle disputes without a middle man. It is
-                handled completely between you and your counterparty.
-              </Copy>
-            </Col>
-          </Row>
-        </Container>
-      </Panel>
-      <Panel bigPadding>
-        <Container>
-          <Row>
-            <Col md={6}>
-              <ImageInline src={imageSprout} alt="Man sprouting truth" />
-            </Col>
-            <Col md={6}>
-              <Title>
-                So much <strong>more_</strong>
-              </Title>
-              <Quote>
-                “Erasure solves the problem of bad information online. What
-                would Reddit look like if users had something real to lose for
-                every post, would troll farms be able to manipulate it as
-                easily? What if you could burn a publication’s stake for
-                promoting fake news, or an advertiser for misleading consumers?
-                Can Erasure help manage the threat of deep-fakes? It may be that
-                the only way to distinguish good from bad information online may
-                come down to how much value its creator stakes behind it. That’s
-                the vision of this protocol.”
+                  : a new marketplace for sourcing any kind of information. Make
+                  requests for information like predictions, secrets,
+                  whistleblowers, recommendations and require that fulfillers
+                  place a stake. Try it today.
+                </Copy>
                 <Spacer />
-                <br />—{" "}
-                <Link href="https://www.placeholder.vc/">Placeholder VC</Link>
-              </Quote>
-              <Copy>
-                <Spacer />
-                <Spacer />
-                We won’t reach this world of the future alone. Join us in making
-                it.
-              </Copy>
-              <Spacer />
-              <Spacer />
-              <Copy>
-                <FlexRow>
-                  <a
+                <Copy>
+                  <Link href="https://erasurequant.com" target="_blank">
+                    <strong>Erasure Quant</strong>
+                  </Link>
+                  : an ongoing tournament to gather Russel 3000 stock
+                  predictions. All predictions are staked, and are burned
+                  according to accuracy. Rewards paid are proportional to the
+                  stake.
+                </Copy>
+              </Col>
+            </Row>
+          </Container>
+        </Panel>
+        <Panel bigPadding>
+          <Container>
+            {/* <HalfImage src={imageXrayCut} /> */}
+
+            <Row>
+              <Col md={6}>
+                <img src={imageXrayTurned} style={{ width: "100%" }} />
+              </Col>
+              <Col md={6}>
+                <Title mobile={isMobile}>
+                  Only see <br />
+                  what’s <strong>real_</strong>
+                </Title>
+                <Copy>
+                  Making a Twitter account doesn't cost anything. Nor does
+                  making ten thousand. The growing number of bots and trolls
+                  online are making important public conversations difficult.
+                </Copy>
+
+                <Copy>
+                  <Link
                     href="https://github.com/erasureprotocol/erasure-protocol"
                     target="_blank"
                   >
-                    <Button>Github</Button>
-                  </a>
-                  <Spacer horizontal />
-                  <a
-                    href="https://medium.com/numerai/the-erasure-protocol-awakens-48a34cc4b5d0?source=collection_home---6------6-----------------------"
-                    target="_blank"
-                  >
-                    <Button>Medium</Button>
-                  </a>
-                  <Spacer horizontal />
-                  <a href="https://twitter.com/numerai" target="_blank">
-                    <Button>Twitter</Button>
-                  </a>
-                </FlexRow>
-              </Copy>
-            </Col>
-          </Row>
-        </Container>
-      </Panel>
-      <Footer>
-        <Container>
-          <FlexRow spaceBetween>
-            <div>ERASURE</div>
-            <FlexRow center>
-              {/* <NavLink href="#">Contact</NavLink> */}
-              <NavLink
-                href="https://github.com/erasureprotocol/erasure-protocol"
-                target="_blank"
-              >
-                Github
-              </NavLink>
-              <NavLink href="https://docs.erasure.world/" target="_blank">
-                Docs
-              </NavLink>
+                    Erasure’s protocol
+                  </Link>{" "}
+                  can be used to create a browser-extension that hides all
+                  tweets, Reddit posts and emails that aren’t staked with a
+                  nominal amount of currency. Spam and bot armies would suddenly
+                  become prohibitively expensive.
+                </Copy>
+
+                <Copy>
+                  Like x-ray goggles for the Internet, Erasure can cut through
+                  the noise by only showing you what people have staked currency
+                  on.
+                </Copy>
+
+                <Copy>
+                  Numerai currently uses staking on Erasure to filter
+                  contributing data scientists’ predictions.
+                </Copy>
+              </Col>
+            </Row>
+          </Container>
+        </Panel>
+        <ImagePanel src={imagePunish}>
+          <Slide bottom>
+            <ImageTitle mobile={isMobile} end>
+              <strong>Punish</strong> bad dates_
+            </ImageTitle>
+          </Slide>
+        </ImagePanel>
+        <Panel>
+          <Container>
+            <Row>
+              <Col md={{ span: 10, offset: 1 }}>
+                <Copy>
+                  What about using stakes to enforce promises? Imagine an app
+                  that allows a man to stake on a date. For 24 hours she has the
+                  power to indiscriminately slash the money he has put down, so
+                  she’s more likely to believe him when he promises to be a
+                  gentleman. This app can be made with Erasure.
+                </Copy>
+
+                <Copy>
+                  The instant trust earned by staking enables transacting with a
+                  much broader set of people. More people would accommodate a
+                  couch surfer who staked money for the duration of her stay.
+                  More people would accept a staked meeting request from a
+                  stranger. More people would host events if attendees staked
+                  their attendance. More people would pick up cold calls if they
+                  were staked.
+                </Copy>
+
+                <Copy>
+                  Erasure lets you settle disputes without a middle man. It is
+                  handled completely between you and your counterparty.
+                </Copy>
+              </Col>
+            </Row>
+          </Container>
+        </Panel>
+        <Panel bigPadding>
+          <Container>
+            <Row>
+              <Col md={6}>
+                <ImageInline src={imageSprout} alt="Man sprouting truth" />
+              </Col>
+              <Col md={6}>
+                <Title>
+                  So much <strong>more_</strong>
+                </Title>
+                <Quote>
+                  “Erasure solves the problem of bad information online. What
+                  would Reddit look like if users had something real to lose for
+                  every post, would troll farms be able to manipulate it as
+                  easily? What if you could burn a publication’s stake for
+                  promoting fake news, or an advertiser for misleading
+                  consumers? Can Erasure help manage the threat of deep-fakes?
+                  It may be that the only way to distinguish good from bad
+                  information online may come down to how much value its creator
+                  stakes behind it. That’s the vision of this protocol.”
+                  <Spacer />
+                  <br />—{" "}
+                  <Link href="https://www.placeholder.vc/">Placeholder VC</Link>
+                </Quote>
+                <Copy>
+                  <Spacer />
+                  <Spacer />
+                  We won’t reach this world of the future alone. Join us in
+                  making it.
+                </Copy>
+                <Spacer />
+                <Spacer />
+                <Copy>
+                  <FlexRow>
+                    <a
+                      href="https://github.com/erasureprotocol/erasure-protocol"
+                      target="_blank"
+                    >
+                      <Button>Github</Button>
+                    </a>
+                    <Spacer horizontal />
+                    <a
+                      href="https://medium.com/numerai/the-erasure-protocol-awakens-48a34cc4b5d0?source=collection_home---6------6-----------------------"
+                      target="_blank"
+                    >
+                      <Button>Medium</Button>
+                    </a>
+                    <Spacer horizontal />
+                    <a href="https://twitter.com/numerai" target="_blank">
+                      <Button>Twitter</Button>
+                    </a>
+                  </FlexRow>
+                </Copy>
+              </Col>
+            </Row>
+          </Container>
+        </Panel>
+        <Footer>
+          <Container>
+            <FlexRow spaceBetween>
+              <div>ERASURE</div>
+              <FlexRow center>
+                {/* <NavLink href="#">Contact</NavLink> */}
+                <NavLink
+                  href="https://github.com/erasureprotocol/erasure-protocol"
+                  target="_blank"
+                >
+                  Github
+                </NavLink>
+                <NavLink href="https://docs.erasure.world/" target="_blank">
+                  Docs
+                </NavLink>
+              </FlexRow>
             </FlexRow>
-          </FlexRow>
-        </Container>
-      </Footer>
-    </div>
+          </Container>
+        </Footer>
+      </div>
+    </I18nProvider>
   );
 }
 

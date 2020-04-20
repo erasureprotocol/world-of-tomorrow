@@ -1,11 +1,11 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2020-04-16 14:12-0400\n"
+"POT-Creation-Date: 2020-04-20 14:01-0400\n"
 "Mime-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: @lingui/cli\n"
-"Language: zh_HANS\n"
+"Language: zh\n"
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "PO-Revision-Date: \n"
@@ -67,7 +67,7 @@ msgstr "这跟Numerai 公司利用抵押资金过滤处理那些由匿名数据�
 
 #: src/App.js:239
 msgid "Only see <0/>what’s <1>real_</1>"
-msgstr "所见之物皆<0><1>真实可信</1>"
+msgstr "所见之物皆<0/><1>真实可信</1>"
 
 #: src/App.js:338
 msgid "So much <0>more_</0>"
@@ -79,7 +79,7 @@ msgstr "匿名信息<0/><1>也能加入市场</1>"
 
 #: src/App.js:309
 msgid "The instant trust earned by staking enables transacting with a much broader set of people. More people would accommodate a couch surfer who staked money for the duration of her stay. More people would accept a staked meeting request from a stranger. More people would host events if attendees staked their attendance. More people would pick up cold calls if they were staked."
-msgstr "同样地，由资金抵押所产生的"即时信用"可以用在更广泛的人群上。如果一个沙发旅行者在住宿期间提供押金，会有更多的人愿意接纳他。越来越多的人会接受陌生人提出的有质押担保的见面要求。如果与会者为他们的出席质押，会有更多的人举办活动。如果陌生来电有质押，人们更愿意接听。"
+msgstr "同样地，由资金抵押所产生的'即时信用'可以用在更广泛的人群上。如果一个沙发旅行者在住宿期间提供押金，会有更多的人愿意接纳他。越来越多的人会接受陌生人提出的有质押担保的见面要求。如果与会者为他们的出席质押，会有更多的人举办活动。如果陌生来电有质押，人们更愿意接听。"
 
 #: src/App.js:112
 msgid "Unfortunately many online services suffer because of this zero barrier to participation; there is no cost to misbehaviour like false information, spam, trolling and bot armies which cost only a click."

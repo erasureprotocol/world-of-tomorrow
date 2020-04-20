@@ -20,19 +20,19 @@ import { I18nProvider } from "@lingui/react";
 import { Trans } from "@lingui/macro";
 
 import catalogEn from "./locales/en/messages.js";
-import catalogZh_HANS from "./locales/zh_HANS/messages.js";
+import catalogZh from "./locales/zh/messages.js";
 import catalogZh_HANT from "./locales/zh_HANT/messages.js";
 import catalogRu from "./locales/ru/messages.js";
 import catalogEs from "./locales/es/messages.js";
 const catalogs = {
   en: catalogEn,
-  zh_HANS: catalogZh_HANS,
+  zh: catalogZh,
   zh_HANT: catalogZh_HANT,
   ru: catalogRu,
   es: catalogEs
 };
 
-const zh_HANT_alt = ["zh_HANT", "zh_TW", "zh_HK"];
+const zh_HANT_alt = ["zh_HANT", "zh_TW", "zh_HK", "zh-HANT", "zh-TW", "zh-HK"];
 
 function detectLanguage() {
   var language = "en";
@@ -42,9 +42,9 @@ function detectLanguage() {
   if (longLanguage && catalogs[longLanguage.slice(0, 2)]) {
     if (longLanguage.slice(0, 2) === "zh") {
       if (zh_HANT_alt.includes(longLanguage)) {
-        language = "zh_HANT"
+        language = "zh_HANT";
       } else {
-        language = "zh_HANS"
+        language = "zh";
       }
     } else {
       language = longLanguage.slice(0, 2);

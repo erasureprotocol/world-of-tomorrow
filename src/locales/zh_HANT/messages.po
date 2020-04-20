@@ -15,7 +15,7 @@ msgstr ""
 
 #: src/App.js:253
 msgid "<0>Erasure’s protocol</0> can be used to create a browser-extension that hides all tweets, Reddit posts and emails that aren’t staked with a nominal amount of currency. Spam and bot armies would suddenly become prohibitively expensive."
-msgstr "<0>Erasure 協議</0> 可以開發這樣一個流覽器擴展，它能夠自動隱藏所有沒有資金抵押的網路資訊（抵押數目可以僅僅是象徵性的），例如推特發文或者Reddit 發文，甚至可以對電子郵件地址進行過濾。這樣的話，垃圾郵件、網路水軍或者大量的惡意腳本機器人的運作成本會大大提高，從而令不法分子望而卻步。"
+msgstr "<0>Erasure協議</0> 可以開發這樣一個流覽器擴展，它能夠自動隱藏所有沒有資金抵押的網路資訊（抵押數目可以僅僅是象徵性的），例如推特發文或者Reddit 發文，甚至可以對電子郵件地址進行過濾。這樣的話，垃圾郵件、網路水軍或者大量的惡意腳本機器人的運作成本會大大提高，從而令不法分子望而卻步。"
 
 #: src/App.js:288
 msgid "<0>Punish</0> bad dates_"
@@ -23,7 +23,7 @@ msgstr "<0>安心</0>赴往陌生約會"
 
 #: src/App.js:98
 msgid "A Way To Be <0>Believed_</0>"
-msgstr "Staking 使得<0>信任</0>成為可能"
+msgstr "Staking使得<0>信任</0>成為可能"
 
 #: src/App.js:87
 msgid "A new staking protocol"
@@ -31,7 +31,7 @@ msgstr "一個新的Staking協議"
 
 #: src/App.js:120
 msgid "But what if you were able to attach a small amount of money to your online interactions, and the person you were interacting with was, for a period of time, allowed to destroy your staked money? A stranger might now be more willing to pay attention and trust you, because you have skin in the game."
-msgstr "設想一下，你在提供每個消息的時候都必須附上少量的資金抵押（ staking），而資訊的接收方在一定時間內如果不滿意，他能夠做出操作，將你的抵押清零。如此簡單易懂的抵押機制，能大大提高網上消息的可信度，即便是陌生人也可以互相信任。"
+msgstr "設想一下，你在提供每個消息的時候都必須附上少量的資金抵押（staking），而資訊的接收方在一定時間內如果不滿意，他能夠做出操作，將你的抵押清零。如此簡單易懂的抵押機制，能大大提高網上消息的可信度，即便是陌生人也可以互相信任。"
 
 #: src/App.js:163
 msgid "Buying information has traditionally been difficult because you can only judge its quality once you have paid for and received it. This has meant only buying information from trusted sources with a good reputation. This excludes the long tail of people around the world who have valuable insights but no way to be believed."

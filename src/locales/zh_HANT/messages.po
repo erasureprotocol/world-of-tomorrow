@@ -91,7 +91,7 @@ msgstr "你能否想像資金抵押可以用在約會上？比如我們可以用
 
 #: src/App.js:190
 msgid "a hedge fund that trades equities based on an aggregation of thousands of predictions made by a global network of competing data scientists. Because each user stakes on their predictions and inaccurate predictions have their stakes destroyed, Numerai can gauge the confidence of the anonymous competitors."
-msgstr "首先，由我們提供加密的原始數據，然後把全世界各地匿名參與專案的數據科學家提交的上千組股價預測進行合併分析處理，做出統一的買賣操作。每位匿名數據科學家可以對其預測做出資金抵押。如果預測成功，則會得到按照其抵押對應比例的獎勵，如果預測失效，則抵押的虛擬貨幣會受到相應比例的銷毀懲罰。這樣的機制下，Numerai 公司能根據抵押金額的大小判斷其所提交匿名預測的可信度。"
+msgstr "一個對沖基金，首先，由我們提供加密的原始數據，然後把全世界各地匿名參與專案的數據科學家提交的上千組股價預測進行合併分析處理，做出統一的買賣操作。每位匿名數據科學家可以對其預測做出資金抵押。如果預測成功，則會得到按照其抵押對應比例的獎勵，如果預測失效，則抵押的虛擬貨幣會受到相應比例的銷毀懲罰。這樣的機制下，Numerai 公司能根據抵押金額的大小判斷其所提交匿名預測的可信度。"
 
 #: src/App.js:205
 msgid "a new marketplace for sourcing any kind of information. Make requests for information like predictions, secrets, whistleblowers, recommendations and require that fulfillers place a stake. Try it today."
@@ -99,8 +99,8 @@ msgstr "一個簡單易用的去中心情報市場。你可以在這個市場上
 
 #: src/App.js:218
 msgid "an ongoing tournament to gather Russel 3000 stock predictions. All predictions are staked, and are burned according to accuracy. Rewards paid are proportional to the stake."
-msgstr "收集羅素3000 的股票價格預測。與Numerai 對沖基金的區別是，我們不提供數據，用戶需要自行收集。但是同樣地所有預測都有對應的資金抵押，我們會根據預測的準確性進行獎懲。"
+msgstr "一個現在進行的競賽，收集羅素3000 的股票價格預測。與Numerai 對沖基金的區別是，我們不提供數據，用戶需要自行收集。但是同樣地所有預測都有對應的資金抵押，我們會根據預測的準確性進行獎懲。"
 
 #: src/App.js:90
 msgid "powered by NMR"
-msgstr "由NMR支持"
+msgstr "由NMR開發並支持"

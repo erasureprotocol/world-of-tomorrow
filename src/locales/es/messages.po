@@ -103,4 +103,4 @@ msgstr "un torneo en marcha para recopilar predicciones sobre las acciones del R
 
 #: src/App.js:90
 msgid "powered by NMR"
-msgstr "powered by NMR"
+msgstr "impulsado por NMR"

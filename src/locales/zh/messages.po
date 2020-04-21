@@ -13,94 +13,94 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/App.js:253
+#: src/App.js:266
 msgid "<0>Erasure’s protocol</0> can be used to create a browser-extension that hides all tweets, Reddit posts and emails that aren’t staked with a nominal amount of currency. Spam and bot armies would suddenly become prohibitively expensive."
 msgstr "<0>Erasure协议</0>可用于创建浏览器扩展，来屏蔽所有未用名义货币下注的推文， Reddit帖子和电子邮件。垃圾邮件和漫游器军队会突然变得成本高昂而令不法分子望而却步。"
 
-#: src/App.js:288
+#: src/App.js:301
 msgid "<0>Punish</0> bad dates_"
 msgstr "<0>安心</0>赴往陌生约会"
 
-#: src/App.js:98
+#: src/App.js:111
 msgid "A Way To Be <0>Believed_</0>"
 msgstr "Staking使得<0>信任</0>成为可能"
 
-#: src/App.js:87
+#: src/App.js:100
 msgid "A new staking protocol"
 msgstr "一个新的Staking协议"
 
-#: src/App.js:120
+#: src/App.js:133
 msgid "But what if you were able to attach a small amount of money to your online interactions, and the person you were interacting with was, for a period of time, allowed to destroy your staked money? A stranger might now be more willing to pay attention and trust you, because you have skin in the game."
 msgstr "设想一下，你在提供每个消息的时候都必须附上少量的资金抵押（staking），而资讯的接收方在一定时间内如果不满意，他能够做出操作，将你的抵押清零。如此简单易懂的抵押机制，能大大提高网上消息的可信度，即便是陌生人也可以互相信任。"
 
-#: src/App.js:163
+#: src/App.js:176
 msgid "Buying information has traditionally been difficult because you can only judge its quality once you have paid for and received it. This has meant only buying information from trusted sources with a good reputation. This excludes the long tail of people around the world who have valuable insights but no way to be believed."
 msgstr "一直以来，想安全地购买到有效资讯并不是一件容易的事情：买家必须先付费，才能收到资讯，然后才能判断所得资讯的品质。所以一般买家只能去买那些有可靠声誉的卖家所提供的资讯，而这导致世界上很多持有有价值资讯但无法取信于人的潜在卖家被拒绝在市场之外"
 
-#: src/App.js:131
+#: src/App.js:144
 msgid "Erasure is a live protocol on the Ethereum blockchain that allows this staking mechanism to be adopted across the web. Initially developed to crowdsource intelligence for the Numerai hedge fund, it is now open to be used for any platform. <0>Creating instant trust with perfect strangers opens a surprising array of new possibilities…</0>"
 msgstr "Erasure使用以太坊(Ethereum)区块链上的协议和加密货币，使得这样的资金抵押（staking）可以在区块链上实现。最初，Erasure是美国的Numerai公司为建立一个供多人合作参与的对冲基金的大平台而设计产生的，而现在可以推广到各个平台上。 <0>如果你能够信任一个完全陌生人提供的资讯，互联网能带来什么全新的契机?</0>"
 
-#: src/App.js:321
+#: src/App.js:334
 msgid "Erasure lets you settle disputes without a middle man. It is handled completely between you and your counterparty."
 msgstr "Erasure 让您无需第三方，而完全交由您和您的交易对手来解决争端。"
 
-#: src/App.js:103
+#: src/App.js:116
 msgid "In the real world, producing anything has a cost. This is not true on the Internet, where contributing information and commentary is completely free. This has been great for bootstrapping and giving billions of people a platform."
 msgstr "在现实世界中生产提供任何东西都需要付出代价，而在互联网上发布评论消息却是完全免费的。这给全球数十亿的人们提供了建立共用资讯平台的机会。"
 
-#: src/App.js:268
+#: src/App.js:281
 msgid "Like x-ray goggles for the Internet, Erasure can cut through the noise by only showing you what people have staked currency on."
 msgstr "就像专门为互联网准备的AR眼镜一样，Erasure 能够自动过滤掉网上的“噪音”，只提供给你有资金抵押过的有效资讯。"
 
-#: src/App.js:245
+#: src/App.js:258
 msgid "Making a Twitter account doesn't cost anything. Nor does making ten thousand. The growing number of bots and trolls online are making important public conversations difficult."
 msgstr "创建一个推特帐号并没有什么成本，就算创建成百上千个这样的帐号也不需要什么成本。如此众多的帐号里，僵尸粉、脚本机器人和喷子占了相当多的数量，这使得在网上进行正常的谈话交流反而变得不容易。"
 
-#: src/App.js:173
+#: src/App.js:186
 msgid "Now imagine if information sources staked their offering: a buyer can then punish the source if they do not like what was delivered. Like this, information can be trusted from the individuals who do not have track records or wish to stay anonymous. <0>Erasure is being used for this right now:</0>"
 msgstr "想像一下，如果每项资讯的来源都有对应的资金抵押，而买家有权对低质量情报发布者的抵押做出惩罚。那么卖家就不需要声誉或者关系作保证，甚至可以完全匿名地出售资讯。 <0>基于这点，目前Numerai 公司正将Erasure 运用在这些应用中：</0>"
 
-#: src/App.js:276
+#: src/App.js:289
 msgid "Numerai currently uses staking on Erasure to filter contributing data scientists’ predictions."
 msgstr "这跟Numerai 公司利用抵押资金过滤处理那些由匿名数据科学家上传的预测数据的道理是一样的。"
 
-#: src/App.js:239
+#: src/App.js:252
 msgid "Only see <0/>what’s <1>real_</1>"
 msgstr "所见之物皆<0/><1>真实可信</1>"
 
-#: src/App.js:338
+#: src/App.js:351
 msgid "So much <0>more_</0>"
 msgstr "Erasure 世界的<0>更多可能</0>"
 
-#: src/App.js:150
+#: src/App.js:163
 msgid "Summon intelligence<0/><1>out of thin air_</1>"
 msgstr "匿名信息<0/><1>也能加入市场</1>"
 
-#: src/App.js:309
+#: src/App.js:322
 msgid "The instant trust earned by staking enables transacting with a much broader set of people. More people would accommodate a couch surfer who staked money for the duration of her stay. More people would accept a staked meeting request from a stranger. More people would host events if attendees staked their attendance. More people would pick up cold calls if they were staked."
 msgstr "同样地，由资金抵押所产生的'即时信用'可以用在更广泛的人群上。如果一个沙发旅行者在住宿期间提供押金，会有更多的人愿意接纳他。越来越多的人会接受陌生人提出的有质押担保的见面要求。如果与会者为他们的出席质押，会有更多的人举办活动。如果陌生来电有质押，人们更愿意接听。"
 
-#: src/App.js:112
+#: src/App.js:125
 msgid "Unfortunately many online services suffer because of this zero barrier to participation; there is no cost to misbehaviour like false information, spam, trolling and bot armies which cost only a click."
 msgstr "然而与此同时这种零成本的参与方式也带来了无数的垃圾邮件，诈骗广告，假新闻，恶意脚本机器人等等。作假几乎没有任何成本，只需简单地敲击键盘，这使很多人不敢轻信网上的信息。"
 
-#: src/App.js:299
+#: src/App.js:312
 msgid "What about using stakes to enforce promises? Imagine an app that allows a man to stake on a date. For 24 hours she has the power to indiscriminately slash the money he has put down, so she’s more likely to believe him when he promises to be a gentleman. This app can be made with Erasure."
 msgstr "你能否想像资金抵押可以用在约会上？比如我们可以用Erasure 做一个这样的APP：男士可以在约会前做资金抵押，而女士有权在约会的24 小时之内无条件对抵押的资金实施惩罚。那么在约会的时候，女士就更能相信男方会恪守礼节，而有资金抵押的男士也相对更容易约到心仪的对象。"
 
-#: src/App.js:190
+#: src/App.js:203
 msgid "a hedge fund that trades equities based on an aggregation of thousands of predictions made by a global network of competing data scientists. Because each user stakes on their predictions and inaccurate predictions have their stakes destroyed, Numerai can gauge the confidence of the anonymous competitors."
 msgstr "一个对冲基金，首先，由我们提供加密的原始数据，然后把全世界各地匿名参与应用的数据科学家提交的上千组股价预测进行合并分析处理，做出统一的买卖操作。每位匿名数据科学家可以对其预测做出资金抵押。如果预测成功，则会得到按照其抵押对应比例的奖励，如果预测失效，则抵押的虚拟货币会受到相应比例的销毁惩罚。这样的机制下，Numerai 公司能根据抵押金额的大小判断其所提交匿名预测的可信度。"
 
-#: src/App.js:205
+#: src/App.js:218
 msgid "a new marketplace for sourcing any kind of information. Make requests for information like predictions, secrets, whistleblowers, recommendations and require that fulfillers place a stake. Try it today."
 msgstr "一个简单易用的去中心信息市场。你可以在这个市场上发布信息需求， 例如预测数据，机密资讯，内幕消息或者建议意见等，而你也可以要求提供资讯的人做资金抵押。现在就来试试吧！"
 
-#: src/App.js:218
+#: src/App.js:231
 msgid "an ongoing tournament to gather Russel 3000 stock predictions. All predictions are staked, and are burned according to accuracy. Rewards paid are proportional to the stake."
 msgstr "一个现在进行的竞赛，收集罗素3000 的股票价格预测。与Numerai 对冲基金的区别是，我们不提供数据，用户需要自行收集。但是同样地所有预测都有对应的资金抵押，我们会根据预测的准确性进行奖惩。"
 
-#: src/App.js:90
+#: src/App.js:103
 msgid "powered by NMR"
 msgstr "由NMR开发并支持"

@@ -51,6 +51,19 @@ function detectLanguage() {
     }
   }
 
+  const pathname = window.location.pathname.toString();
+  if (pathname.slice(1, 3) && catalogs[pathname.slice(1, 3)]) {
+    if (pathname.slice(1, 3) === "zh") {
+      if (zh_HANT_alt.includes(pathname.slice(1))) {
+        language = "zh_HANT";
+      } else {
+        language = "zh";
+      }
+    } else {
+      language = pathname.slice(1, 3);
+    }
+  }
+
   return language;
 }
 

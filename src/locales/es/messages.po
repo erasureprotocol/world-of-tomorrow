@@ -13,94 +13,94 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/App.js:253
+#: src/App.js:266
 msgid "<0>Erasure’s protocol</0> can be used to create a browser-extension that hides all tweets, Reddit posts and emails that aren’t staked with a nominal amount of currency. Spam and bot armies would suddenly become prohibitively expensive."
 msgstr "<0>El protocolo Erasure</0> se puede usar para crear una extensión de navegador que oculte todos los tweets, posts de Reddit y emails que no estén respaldados (staked) con una determinada cantidad de dinero. El Spam y los ejércitos de bots pasarán a ser, de repente, prohibitivamente caros."
 
-#: src/App.js:288
+#: src/App.js:301
 msgid "<0>Punish</0> bad dates_"
 msgstr "<0>Penaliza</0> las malas citas_"
 
-#: src/App.js:98
+#: src/App.js:111
 msgid "A Way To Be <0>Believed_</0>"
 msgstr "Una Forma De Ser <0>Creido_</0>"
 
-#: src/App.js:87
+#: src/App.js:100
 msgid "A new staking protocol"
 msgstr "Un nuevo protocolo de staking"
 
-#: src/App.js:120
+#: src/App.js:133
 msgid "But what if you were able to attach a small amount of money to your online interactions, and the person you were interacting with was, for a period of time, allowed to destroy your staked money? A stranger might now be more willing to pay attention and trust you, because you have skin in the game."
 msgstr "Pero, ¿Y si fueras capaz de adjuntar una pequeña suma de dinero a tus interacciones en linea, y la persona con la que estuviese interactuando pudiese, por un periodo de tiempo, destruir tu dinero staked? Un extraño estaría ahora más dispuesto a prestarte atención y confiar en ti, porque tienes skin in the game."
 
-#: src/App.js:163
+#: src/App.js:176
 msgid "Buying information has traditionally been difficult because you can only judge its quality once you have paid for and received it. This has meant only buying information from trusted sources with a good reputation. This excludes the long tail of people around the world who have valuable insights but no way to be believed."
 msgstr "Comprar información ha sido tradicionalmente difícil porque sólo se puede juzgar su calidad una vez que la has pagado y recibido. Esto ha supuesto que sólo se compre información a fuentes fiables y con una buena reputación. Esto excluye a una gran cantidad de gente en el mundo que posee valiosos conocimientos pero no tiene forma de ser creída."
 
-#: src/App.js:131
+#: src/App.js:144
 msgid "Erasure is a live protocol on the Ethereum blockchain that allows this staking mechanism to be adopted across the web. Initially developed to crowdsource intelligence for the Numerai hedge fund, it is now open to be used for any platform. <0>Creating instant trust with perfect strangers opens a surprising array of new possibilities…</0>"
 msgstr "Erasure es un protocolo que vive en la cadena de bloques Ethereum y que permite que este mecanismo de staking se adopte en toda la web. Inicialmente desarrollado para recabar inteligencia para el hedge fund de Numerai, ahora está abierto y puede ser usado por cualquier plataforma. <0>Crear confianza instantánea con perfectos desconocidos abre una sorprendente lista de nuevas posibilidades…</0>"
 
-#: src/App.js:321
+#: src/App.js:334
 msgid "Erasure lets you settle disputes without a middle man. It is handled completely between you and your counterparty."
 msgstr "Erasure te permite resolver disputas sin un intermediario. Se gestiona completamente entre tu contraparte y tú."
 
-#: src/App.js:103
+#: src/App.js:116
 msgid "In the real world, producing anything has a cost. This is not true on the Internet, where contributing information and commentary is completely free. This has been great for bootstrapping and giving billions of people a platform."
 msgstr "En el mundo real, producir cualquier cosa tiene un coste. Esto no es cierto en Internet, donde contribuir con información y comentarios es completamente gratis. Esto ha sido genial para compartir y dar a billones de personas una plataforma."
 
-#: src/App.js:268
+#: src/App.js:281
 msgid "Like x-ray goggles for the Internet, Erasure can cut through the noise by only showing you what people have staked currency on."
 msgstr "Como gafas de rayos x para Internet, Erasure puede deshacerse del ruido con sólo mostrarte aquello en lo que la gente ha hecho staking de dinero."
 
-#: src/App.js:245
+#: src/App.js:258
 msgid "Making a Twitter account doesn't cost anything. Nor does making ten thousand. The growing number of bots and trolls online are making important public conversations difficult."
 msgstr "Hacer una cuenta de Twitter no cuesta nada. Y tampoco hacer diez mil. El creciente número de bots y trolls está dificultando importantes conversaciones públicas."
 
-#: src/App.js:173
+#: src/App.js:186
 msgid "Now imagine if information sources staked their offering: a buyer can then punish the source if they do not like what was delivered. Like this, information can be trusted from the individuals who do not have track records or wish to stay anonymous. <0>Erasure is being used for this right now:</0>"
 msgstr "Ahora imagina si las fuentes de información hace staking en sus ofertas: un comprador puede entonces castigar a la fuente si no le gusta lo que se le ha entregado. Así, se puede confiar en la información de individuos que no posean una reputación o deseen permanecer en el anonimato. <0>Erasure se está usando para esto ahora mismo:</0>"
 
-#: src/App.js:276
+#: src/App.js:289
 msgid "Numerai currently uses staking on Erasure to filter contributing data scientists’ predictions."
 msgstr "Numerai está actualmente usando el staking en Erasure para filtrar las predicciones de los científicos de datos."
 
-#: src/App.js:239
+#: src/App.js:252
 msgid "Only see <0/>what’s <1>real_</1>"
 msgstr "Sólo ve <0/>lo que es <1>real_</1>"
 
-#: src/App.js:338
+#: src/App.js:351
 msgid "So much <0>more_</0>"
 msgstr "Mucho <0>más_</0>"
 
-#: src/App.js:150
+#: src/App.js:163
 msgid "Summon intelligence<0/><1>out of thin air_</1>"
 msgstr "Extrae inteligencia<0/><1>de la nada</1>"
 
-#: src/App.js:309
+#: src/App.js:322
 msgid "The instant trust earned by staking enables transacting with a much broader set of people. More people would accommodate a couch surfer who staked money for the duration of her stay. More people would accept a staked meeting request from a stranger. More people would host events if attendees staked their attendance. More people would pick up cold calls if they were staked."
 msgstr "La confianza instantánea conseguida con el staking hace posible comerciar con un conjunto mucho más amplio de gente. Más gente acogería en su sofá a un surfero con dinero staked por la duración de su estancia. Más gente aceptaría una (staked) petición de cita con un extraño. Más gente organizaría eventos si los asistentes hiciesen staking en su asistencia. Más gente atendería llamadas frías si estuviesen staked."
 
-#: src/App.js:112
+#: src/App.js:125
 msgid "Unfortunately many online services suffer because of this zero barrier to participation; there is no cost to misbehaviour like false information, spam, trolling and bot armies which cost only a click."
 msgstr "Desafortunadamente muchos servicios online sufren debido a esta falta de barrera a la participación; no hay coste para el mal comportamiento como falsa información, spam, trolls y ejércitos de bots que cuestan un sólo click."
 
-#: src/App.js:299
+#: src/App.js:312
 msgid "What about using stakes to enforce promises? Imagine an app that allows a man to stake on a date. For 24 hours she has the power to indiscriminately slash the money he has put down, so she’s more likely to believe him when he promises to be a gentleman. This app can be made with Erasure."
 msgstr "¿Y si usamos stakes para asegurar promesas? Imagina una app que permita a un hombre hacer stake en una cita. Durante 24 horas ella tiene el poder de eliminar indiscriminadamente el dinero que él ha comprometido, de manera que ella tendrá más razones para creerle cuando promete ser un caballero. Esta app puede ser desarrollada con Erasure."
 
-#: src/App.js:190
+#: src/App.js:203
 msgid "a hedge fund that trades equities based on an aggregation of thousands of predictions made by a global network of competing data scientists. Because each user stakes on their predictions and inaccurate predictions have their stakes destroyed, Numerai can gauge the confidence of the anonymous competitors."
 msgstr "un hedge fund que comercia con acciones en base a la agregación de miles de predicciones hechas por una red global de científicos de datos en competencia. Debido a que cada usuario hace staking en sus predicciones y las predicciones imprecisas dan lugar a la destrucción del dinero staked, Numerai puede medir la confianza de los competidores anónimos."
 
-#: src/App.js:205
+#: src/App.js:218
 msgid "a new marketplace for sourcing any kind of information. Make requests for information like predictions, secrets, whistleblowers, recommendations and require that fulfillers place a stake. Try it today."
 msgstr "un nuevo mercado para dar salida a cualquier tipo de información. Haz peticiones de información como predicciones, secretos, chivatazos, o recomendaciones, y requiere que los proveedores hagan un stake. Pruébalo hoy."
 
-#: src/App.js:218
+#: src/App.js:231
 msgid "an ongoing tournament to gather Russel 3000 stock predictions. All predictions are staked, and are burned according to accuracy. Rewards paid are proportional to the stake."
 msgstr "un torneo en marcha para recopilar predicciones sobre las acciones del Russell 3000. Todas las predicciones sujetas a staking, y quemadas de acuerdo a su precisión. Las recompensas pagadas son proporcionales al stake."
 
-#: src/App.js:90
+#: src/App.js:103
 msgid "powered by NMR"
 msgstr "impulsado por NMR"

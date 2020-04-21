@@ -85,6 +85,10 @@ msgstr "同样地，由资金抵押所产生的'即时信用'可以用在更广�
 msgid "Unfortunately many online services suffer because of this zero barrier to participation; there is no cost to misbehaviour like false information, spam, trolling and bot armies which cost only a click."
 msgstr "然而与此同时这种零成本的参与方式也带来了无数的垃圾邮件，诈骗广告，假新闻，恶意脚本机器人等等。作假几乎没有任何成本，只需简单地敲击键盘，这使很多人不敢轻信网上的信息。"
 
+#: src/App.js:377
+msgid "We won’t reach this world of the future alone. Join us in making it."
+msgstr ""
+
 #: src/App.js:312
 msgid "What about using stakes to enforce promises? Imagine an app that allows a man to stake on a date. For 24 hours she has the power to indiscriminately slash the money he has put down, so she’s more likely to believe him when he promises to be a gentleman. This app can be made with Erasure."
 msgstr "你能否想像资金抵押可以用在约会上？比如我们可以用Erasure 做一个这样的APP：男士可以在约会前做资金抵押，而女士有权在约会的24 小时之内无条件对抵押的资金实施惩罚。那么在约会的时候，女士就更能相信男方会恪守礼节，而有资金抵押的男士也相对更容易约到心仪的对象。"
@@ -98,9 +102,13 @@ msgid "a new marketplace for sourcing any kind of information. Make requests for
 msgstr "一个简单易用的去中心信息市场。你可以在这个市场上发布信息需求， 例如预测数据，机密资讯，内幕消息或者建议意见等，而你也可以要求提供资讯的人做资金抵押。现在就来试试吧！"
 
 #: src/App.js:231
-msgid "an ongoing tournament to gather Russel 3000 stock predictions. All predictions are staked, and are burned according to accuracy. Rewards paid are proportional to the stake."
+msgid "an ongoing tournament to gather Russell 3000 stock predictions. All predictions are staked, and are burned according to accuracy. Rewards paid are proportional to the stake."
 msgstr "一个现在进行的竞赛，收集罗素3000 的股票价格预测。与Numerai 对冲基金的区别是，我们不提供数据，用户需要自行收集。但是同样地所有预测都有对应的资金抵押，我们会根据预测的准确性进行奖惩。"
 
 #: src/App.js:103
 msgid "powered by NMR"
 msgstr "由NMR开发并支持"
+
+#: src/App.js:356
+msgid "“Erasure solves the problem of bad information online. What would Reddit look like if users had something real to lose for every post, would troll farms be able to manipulate it as easily? What if you could burn a publication’s stake for promoting fake news, or an advertiser for misleading consumers? Can Erasure help manage the threat of deep-fakes? It may be that the only way to distinguish good from bad information online may come down to how much value its creator stakes behind it. That’s the vision of this protocol.”"
+msgstr ""

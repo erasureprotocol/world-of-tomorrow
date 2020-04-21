@@ -95,7 +95,7 @@
       ]
     ]
   },
-  "an ongoing tournament to gather Russel 3000 stock predictions. All predictions are staked, and are burned according to accuracy. Rewards paid are proportional to the stake.": {
+  "an ongoing tournament to gather Russell 3000 stock predictions. All predictions are staked, and are burned according to accuracy. Rewards paid are proportional to the stake.": {
     "origin": [
       [
         "src/App.js",
@@ -180,6 +180,22 @@
       [
         "src/App.js",
         351
+      ]
+    ]
+  },
+  "“Erasure solves the problem of bad information online. What would Reddit look like if users had something real to lose for every post, would troll farms be able to manipulate it as easily? What if you could burn a publication’s stake for promoting fake news, or an advertiser for misleading consumers? Can Erasure help manage the threat of deep-fakes? It may be that the only way to distinguish good from bad information online may come down to how much value its creator stakes behind it. That’s the vision of this protocol.”": {
+    "origin": [
+      [
+        "src/App.js",
+        356
+      ]
+    ]
+  },
+  "We won’t reach this world of the future alone. Join us in making it.": {
+    "origin": [
+      [
+        "src/App.js",
+        377
       ]
     ]
   }

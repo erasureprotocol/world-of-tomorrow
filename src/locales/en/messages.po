@@ -85,6 +85,10 @@ msgstr "The instant trust earned by staking enables transacting with a much broa
 msgid "Unfortunately many online services suffer because of this zero barrier to participation; there is no cost to misbehaviour like false information, spam, trolling and bot armies which cost only a click."
 msgstr "Unfortunately many online services suffer because of this zero barrier to participation; there is no cost to misbehaviour like false information, spam, trolling and bot armies which cost only a click."
 
+#: src/App.js:377
+msgid "We won’t reach this world of the future alone. Join us in making it."
+msgstr "We won’t reach this world of the future alone. Join us in making it."
+
 #: src/App.js:312
 msgid "What about using stakes to enforce promises? Imagine an app that allows a man to stake on a date. For 24 hours she has the power to indiscriminately slash the money he has put down, so she’s more likely to believe him when he promises to be a gentleman. This app can be made with Erasure."
 msgstr "What about using stakes to enforce promises? Imagine an app that allows a man to stake on a date. For 24 hours she has the power to indiscriminately slash the money he has put down, so she’s more likely to believe him when he promises to be a gentleman. This app can be made with Erasure."
@@ -98,9 +102,13 @@ msgid "a new marketplace for sourcing any kind of information. Make requests for
 msgstr "a new marketplace for sourcing any kind of information. Make requests for information like predictions, secrets, whistleblowers, recommendations and require that fulfillers place a stake. Try it today."
 
 #: src/App.js:231
-msgid "an ongoing tournament to gather Russel 3000 stock predictions. All predictions are staked, and are burned according to accuracy. Rewards paid are proportional to the stake."
-msgstr "an ongoing tournament to gather Russel 3000 stock predictions. All predictions are staked, and are burned according to accuracy. Rewards paid are proportional to the stake."
+msgid "an ongoing tournament to gather Russell 3000 stock predictions. All predictions are staked, and are burned according to accuracy. Rewards paid are proportional to the stake."
+msgstr "an ongoing tournament to gather Russell 3000 stock predictions. All predictions are staked, and are burned according to accuracy. Rewards paid are proportional to the stake."
 
 #: src/App.js:103
 msgid "powered by NMR"
 msgstr "powered by NMR"
+
+#: src/App.js:356
+msgid "“Erasure solves the problem of bad information online. What would Reddit look like if users had something real to lose for every post, would troll farms be able to manipulate it as easily? What if you could burn a publication’s stake for promoting fake news, or an advertiser for misleading consumers? Can Erasure help manage the threat of deep-fakes? It may be that the only way to distinguish good from bad information online may come down to how much value its creator stakes behind it. That’s the vision of this protocol.”"
+msgstr "“Erasure solves the problem of bad information online. What would Reddit look like if users had something real to lose for every post, would troll farms be able to manipulate it as easily? What if you could burn a publication’s stake for promoting fake news, or an advertiser for misleading consumers? Can Erasure help manage the threat of deep-fakes? It may be that the only way to distinguish good from bad information online may come down to how much value its creator stakes behind it. That’s the vision of this protocol.”"

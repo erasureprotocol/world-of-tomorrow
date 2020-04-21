@@ -229,7 +229,7 @@ function App() {
                   </Link>
                   :
                   <Trans>
-                    an ongoing tournament to gather Russel 3000 stock
+                    an ongoing tournament to gather Russell 3000 stock
                     predictions. All predictions are staked, and are burned
                     according to accuracy. Rewards paid are proportional to the
                     stake.
@@ -353,24 +353,31 @@ function App() {
                   </Trans>
                 </Title>
                 <Quote>
-                  “Erasure solves the problem of bad information online. What
-                  would Reddit look like if users had something real to lose for
-                  every post, would troll farms be able to manipulate it as
-                  easily? What if you could burn a publication’s stake for
-                  promoting fake news, or an advertiser for misleading
-                  consumers? Can Erasure help manage the threat of deep-fakes?
-                  It may be that the only way to distinguish good from bad
-                  information online may come down to how much value its creator
-                  stakes behind it. That’s the vision of this protocol.”
+                  <Trans>
+                    “Erasure solves the problem of bad information online. What
+                    would Reddit look like if users had something real to lose
+                    for every post, would troll farms be able to manipulate it
+                    as easily? What if you could burn a publication’s stake for
+                    promoting fake news, or an advertiser for misleading
+                    consumers? Can Erasure help manage the threat of deep-fakes?
+                    It may be that the only way to distinguish good from bad
+                    information online may come down to how much value its
+                    creator stakes behind it. That’s the vision of this
+                    protocol.”
+                  </Trans>
                   <Spacer />
                   <br />—{" "}
-                  <Link href="https://www.placeholder.vc/">Placeholder VC</Link>
+                  <Link href="https://www.placeholder.vc/blog/2020/4/9/erasure">
+                    Placeholder VC Thesis
+                  </Link>
                 </Quote>
                 <Copy>
                   <Spacer />
                   <Spacer />
-                  We won’t reach this world of the future alone. Join us in
-                  making it.
+                  <Trans>
+                    We won’t reach this world of the future alone. Join us in
+                    making it.
+                  </Trans>
                 </Copy>
                 <Spacer />
                 <Spacer />
@@ -384,7 +391,7 @@ function App() {
                     </a>
                     <Spacer horizontal />
                     <a
-                      href="https://medium.com/numerai/the-erasure-protocol-awakens-48a34cc4b5d0?source=collection_home---6------6-----------------------"
+                      href="https://medium.com/numerai/the-erasure-protocol-awakens-48a34cc4b5d0"
                       target="_blank"
                     >
                       <Button>Medium</Button>

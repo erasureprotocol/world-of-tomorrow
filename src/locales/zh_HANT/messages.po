@@ -87,7 +87,7 @@ msgstr "然而與此同時這種零成本的參與方式也帶來了無數的垃
 
 #: src/App.js:377
 msgid "We won’t reach this world of the future alone. Join us in making it."
-msgstr ""
+msgstr "獨木不成林，單弦不成音。我們需要大家的參與和支持才能達成這個目標。我們相信，在我們從未預料到的領域，Erasure也會大有用武之地。因此我們提供了開發工具包SDK讓所有人可以參與進來，共同構建基於Erasure 的充滿信任的未來世界！"
 
 #: src/App.js:312
 msgid "What about using stakes to enforce promises? Imagine an app that allows a man to stake on a date. For 24 hours she has the power to indiscriminately slash the money he has put down, so she’s more likely to believe him when he promises to be a gentleman. This app can be made with Erasure."
@@ -111,4 +111,4 @@ msgstr "由NMR開發並支持"
 
 #: src/App.js:356
 msgid "“Erasure solves the problem of bad information online. What would Reddit look like if users had something real to lose for every post, would troll farms be able to manipulate it as easily? What if you could burn a publication’s stake for promoting fake news, or an advertiser for misleading consumers? Can Erasure help manage the threat of deep-fakes? It may be that the only way to distinguish good from bad information online may come down to how much value its creator stakes behind it. That’s the vision of this protocol.”"
-msgstr ""
+msgstr "“Erasure 可以解決網上不良資訊的問題。想像一下，如果Reddit上的用戶的發文有可能使其抵押資金受到損失，那整個網站會變成什麼樣子？網路水軍還能不能像現在這樣肆意地誤導大眾？再想像一下，如果一個公眾媒體發佈假新聞，或者是廣告商的廣告 故意誤導消費者，而你能對其進行懲罰，是不是值得慶倖？那像對於deep-fake之類的技術帶來的危機，Erasure是否有能力化解？也許鑒別正確資訊與不良資訊的唯一有效途徑是依據其發佈者所抵押的資金大小。這就是協議的遠景。”"

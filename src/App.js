@@ -224,8 +224,8 @@ function App() {
                 </Copy>
                 <Spacer />
                 <Copy>
-                  <Link href="https://erasurequant.com" target="_blank">
-                    <strong>Erasure Quant</strong>
+                  <Link href="https://signals.numer.ai" target="_blank">
+                    <strong>Numerai Signals</strong>
                   </Link>
                   :
                   <Trans>

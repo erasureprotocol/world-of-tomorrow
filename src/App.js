@@ -230,7 +230,7 @@ function App() {
                   :&nbsp;
                   <Trans>
                     an ongoing tournament to gather Russell 3000 stock
-                    predictions. All predictions are staked, and are burned
+                    predictions, currently in beta. All predictions are staked, and are burned
                     according to accuracy. Rewards paid are proportional to the
                     stake.
                   </Trans>

@@ -199,7 +199,7 @@ function App() {
                       <strong>Numerai</strong>
                     </Link>
                   </strong>
-                  :
+                  :&nbsp;
                   <Trans>
                     a hedge fund that trades equities based on an aggregation of
                     thousands of predictions made by a global network of
@@ -214,7 +214,7 @@ function App() {
                   <Link href="https://erasurebay.org" target="_blank">
                     <strong>Erasure Bay</strong>
                   </Link>
-                  :
+                  :&nbsp;
                   <Trans>
                     a new marketplace for sourcing any kind of information. Make
                     requests for information like predictions, secrets,
@@ -227,7 +227,7 @@ function App() {
                   <Link href="https://signals.numer.ai" target="_blank">
                     <strong>Numerai Signals</strong>
                   </Link>
-                  :
+                  :&nbsp;
                   <Trans>
                     an ongoing tournament to gather Russell 3000 stock
                     predictions. All predictions are staked, and are burned
